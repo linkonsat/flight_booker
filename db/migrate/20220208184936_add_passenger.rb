@@ -4,6 +4,7 @@ class AddPassenger < ActiveRecord::Migration[7.0]
       t.string :name
       t.string :age
       t.string :email 
+      t.belongs_to :user
     end
   end
 end
