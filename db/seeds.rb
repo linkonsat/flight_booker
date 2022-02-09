@@ -5,5 +5,20 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-
-
+Airport.create(:code => "SFO")
+Airport.create(:code => "LAX")
+Airport.create(:code => "NYA")
+Airport.create(:code => "DAL")
+Airport.crate(:code => "BOS")
+Flight(:destination_airport_id => 1, :departure_time => "#{DateTime.new(2012, 8, 29, 22, 35, 0), :arrival_time => "#{DateTime.new(2012, 10, 29, 22, 35, 0)}", :departure_area => "Terminal A1", :departure_airport_id => 1)
+Flight(:destination_airport_id => 1, :departure_time => "#{DateTime.new(2012, 8, 29, 22, 35, 0), :arrival_time => "#{DateTime.new(2012, 10, 22, 22, 35, 0)}", :departure_area => "Terminal A1", :departure_airport_id => 2)
+Flight(:destination_airport_id => 2, :departure_time => "#{DateTime.new(2012, 8, 29, 22, 35, 0), :arrival_time => "#{DateTime.new(2012, 10, 17, 22, 35, 0)}", :departure_area => "Terminal A1", :departure_airport_id => 3)
+Flight(:destination_airport_id => 2, :departure_time => "#{DateTime.new(2012, 8, 29, 22, 35, 0), :arrival_time => "#{DateTime.new(2012, 10, 13, 22, 35, 0)}", :departure_area => "Terminal A1", :departure_airport_id => 2)
+Flight(:destination_airport_id => 3, :departure_time => "#{DateTime.new(2012, 8, 29, 22, 35, 0), :arrival_time => "#{DateTime.new(2012, 10, 4, 22, 35, 0)}", :departure_area => "Terminal A1", :departure_airport_id => 3)
+Flight(:destination_airport_id => 3, :departure_time => "#{DateTime.new(2012, 8, 29, 22, 35, 0), :arrival_time => "#{DateTime.new(2012, 10, 20, 22, 35, 0)}", :departure_area => "Terminal A1", :departure_airport_id => 2)
+Flight(:destination_airport_id => 4, :departure_time => "#{DateTime.new(2012, 8, 29, 22, 35, 0), :arrival_time => "#{DateTime.new(2012, 10, 23, 22, 35, 0)}", :departure_area => "Terminal A1", :departure_airport_id => 4)
+Flight(:destination_airport_id => 4, :departure_time => "#{DateTime.new(2012, 8, 29, 22, 35, 0), :arrival_time => "#{DateTime.new(2012, 10, 11, 22, 35, 0)}", :departure_area => "Terminal A1", :departure_airport_id => 2)
+Flight(:destination_airport_id => 5, :departure_time => "#{DateTime.new(2012, 8, 29, 22, 35, 0), :arrival_time => "#{DateTime.new(2012, 10, 22, 22, 35, 0)}", :departure_area => "Terminal A1", :departure_airport_id => 5)
+Flight(:destination_airport_id => 5, :departure_time => "#{DateTime.new(2012, 8, 29, 22, 35, 0), :arrival_time => "#{DateTime.new(2012, 10, 18, 22, 35, 0)}", :departure_area => "Terminal A1", :departure_airport_id => 2)
+Flight(:destination_airport_id => 1, :departure_time => "#{DateTime.new(2012, 8, 29, 22, 35, 0), :arrival_time => "#{DateTime.new(2012, 10, 10, 22, 35, 0)}", :departure_area => "Terminal A1", :departure_airport_id => 1)
+Flight(:destination_airport_id => 1, :departure_time => "#{DateTime.new(2012, 8, 29, 22, 35, 0), :arrival_time => "#{DateTime.new(2012, 10, 1, 22, 35, 0)}", :departure_area => "Terminal A1", :departure_airport_id => 2)
