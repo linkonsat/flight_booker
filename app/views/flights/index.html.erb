@@ -1,1 +1,10 @@
 Welcome to the (Totally real) flight booker!
+<%= form_with model: @flights do |form| %>
+    Departure Airports
+<%= form.collection_select :airport_id, Airport.order(:code), :id, :code %>
+    Arrival airports 
+<%= form.collection_select :airport_id, Airport.order(:code), :id, :code %>
+    flight arrivals
+<%= form.collection_select :flight_id, Flight.order(:arrival_time), :id, :arrival_day  %>
+<% end %>
+flight.arrival_time.to_datetime.strftime("%d")
