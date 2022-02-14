@@ -4,5 +4,8 @@
 
 import { application } from "./application"
 
-import HelloController from "./hello_controller"
+import FlightSearchSubmissionController from "./flight_search_submission_controller.js"
+application.register("flight-search-submission", FlightSearchSubmissionController)
+
+import HelloController from "./hello_controller.js"
 application.register("hello", HelloController)
