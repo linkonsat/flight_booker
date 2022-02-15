@@ -1,13 +1,18 @@
 Welcome to the (Totally real) flight booker!
 <%= form_with model: @flights, method: :get do |form| %>
     Departure Airports
-<%= form.collection_select :airport_id, Airport.order(:code), :id, :code %>
-    Arrival airports 
 <%= form.collection_select :departure_id, Airport.order(:code), :id, :code %>
+    Arrival airports 
+<%= form.collection_select :destination_id, Airport.order(:code), :id, :code %>
     flight arrivals
-<%= form.collection_select :arrival_id, Flight.order(:arrival_time), :id, :arrival_day  %>
+<%= form.collection_select :flight_id, Flight.order(:arrival_time), :id, :arrival_day  %>
     Passenger count 
 <%= number_field_tag 'quantity', nil, min: 1, max: 4 %>
 <%= form.submit %>
 <% end %>
-found_flight_paths.where("arrival_time LIKE ?", "%2012-10-01%")    
+<% if params.has_key?(:departure_id) %>
+<%= form_with model: @found_flights do |form| %>
+    <%= form.collection_radio_buttons :destination_id, Flight.valid_flights(params), :id, :departure_time %>
+    <%= form.submit %>
+    <% end %> 
+    <% end %>
