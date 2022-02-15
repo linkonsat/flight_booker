@@ -5,6 +5,8 @@ class AddBookingsModel < ActiveRecord::Migration[7.0]
       t.integer :passenger_id
       t.integer :flight_id 
       t.string :status
+      t.string :name 
+      t.string :email
     end
   end
 end

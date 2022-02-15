@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2022_02_09_062244) do
     t.integer "passenger_id"
     t.integer "flight_id"
     t.string "status"
+    t.string "name"
+    t.string "email"
   end
 
   create_table "flights", force: :cascade do |t|
@@ -39,6 +41,7 @@ ActiveRecord::Schema.define(version: 2022_02_09_062244) do
     t.string "name"
     t.string "age"
     t.string "email"
+    t.bigint "booking_id"
     t.bigint "user_id"
     t.index ["user_id"], name: "index_passengers_on_user_id"
   end
