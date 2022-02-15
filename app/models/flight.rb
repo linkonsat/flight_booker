@@ -9,10 +9,13 @@ class Flight < ApplicationRecord
         flight_day = flight.first.arrival_time.to_datetime.strftime("%y-%m-%d") 
         "#{flight_day}"
     end
-    
-    def valid_flights(params)
-        flight_day = Flight.find(params[:flight_id]).departure_time.to_datetime.strftime("%y%m%d") 
-        found_flight_paths = Flight.where("destination_airport_id = ?", params[:destination_airport]).where("departure_airport_id = ?", params[:departure_airport])
-        found_flight_paths.where("departure_time LIKE ?", "%#{flight_day}%")
+
+    def self.valid_flights(params)
+        #debugger
+        flight_day = Flight.find(params[:flight_id]).departure_time.to_datetime.strftime("%y-%m-%d") 
+        found_flight_paths = Flight.where("departure_airport_id = ?", params[:departure_id]).where("destination_airport_id = ?", params[:destination_id])
+        
+        flights = found_flight_paths.where("departure_time LIKE ?", "%#{flight_day}%")
+        #debugger
     end
 end
