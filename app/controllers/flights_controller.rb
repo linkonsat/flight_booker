@@ -1,7 +1,12 @@
 class FlightsController < ApplicationController
     def index 
-        debugger
-        #@validated_flights = Flight.where()
+       # debugger
+        if(params.has_key?(:departure_id))
+        @validated_flights = Flight.valid_flights(params)
+       # debugger
+        else 
+            @validated_flights = []
+        end
   end
 
     def valid_flights_params 
