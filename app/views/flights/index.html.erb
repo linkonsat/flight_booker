@@ -16,6 +16,7 @@ Welcome to the (Totally real) flight booker!
     <%= form.hidden_field :passengers_num, value: "#{@passenger_count}" %>
     <%= form.submit %>
     <% end %> 
-    <% else %>
-    No valid flights found. Please enter a search to find flights
+    <% end %>
+    <% if @validated_flights.nil? || @validated_flights.empty? %>
+    No valid flights found. Please enter another search to find flights
     <% end %>
