@@ -1,0 +1,19 @@
+Thanks for choosing new day(very real) airlines.
+Your Flight information can be found below.
+Departure time: <%= @flight.departure_time %>
+Departure airport: <%= @flight.departure_airport.code %>
+Arrival airport: <%= @flight.destination_airport.code %>
+Flight id:  <%= @flight.id %>
+<%= form_with model: @booking do |form| %>
+        Passengers:
+        <%= form.fields_for :passengers do |passenger_form| %>
+    <%= form.hidden_field :flight_id, value: "#{@flight.id}" %> 
+    <%= passenger_form.text_area :name %>
+    <%= passenger_form.label :name %>
+    <%= passenger_form.text_area :email %>
+    <%= passenger_form.label :email %>
+    <%= passenger_form.number_field :age, in: 13..120 %>
+    <%= passenger_form.label :age %>
+    <% end %>
+    <%= form.submit %>
+    <% end %>

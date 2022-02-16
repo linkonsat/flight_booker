@@ -1,5 +1,5 @@
 Welcome to the (Totally real) flight booker!
-<%= form_with model: @flights, method: :get do |form| %>
+<%= form_with method: :get do |form| %>
     Departure Airports
 <%= form.collection_select :departure_id, Airport.order(:code), :id, :code %>
     Arrival airports 
@@ -11,8 +11,9 @@ Welcome to the (Totally real) flight booker!
 <%= form.submit %>
 <% end %>
 <% if params.has_key?(:departure_id) %>
-<%= form_with model: @found_flights do |form| %>
-    <%= form.collection_radio_buttons :destination_id, Flight.valid_flights(params), :id, :departure_time %>
+<%= form_with method: :get, url: "bookings/new" do |form| %>
+    <%= form.collection_radio_buttons :flight_id, Flight.valid_flights(params), :id, :departure_time %>
+    <%= form.hidden_field :passengers_num, value: "#{@passenger_count}" %>
     <%= form.submit %>
     <% end %> 
     <% end %>
