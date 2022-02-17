@@ -24,12 +24,16 @@
  }
 .nav_bar_container {
     display: flex;
-    align-items: center;
+    border: 20px;
     justify-content: center;
     height: 12.5%;
     background-color: rgb(189, 176, 247);
     color: black;
     border-bottom: solid;
+}
+
+.nav_bar_items {
+    width: 75px;
 }
 
 .flight_search_nav_container {
@@ -70,4 +74,25 @@
     height: 12.5%;
     border-top: solid black;
     background-color: rgb(189, 176, 247);
+}
+
+.booking_forms {
+    width: 35%;
+    margin-left: 35%;
+}
+
+.booking_form_header{
+    width: 35%;
+    margin-left: 35%;
+    margin-bottom: 10px;
+}
+
+.booking_form_information {
+    width: 35%;
+    margin-left: 35%;
+    margin-bottom: 10px;
+}
+
+.booking_submit_button {
+    margin-top: 10px;
 }
