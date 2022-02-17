@@ -1,4 +1,6 @@
-Welcome to the (Totally real) flight booker!
+<%= render "index_nav_bar" %>
+<div class="flight_search_nav_container">
+<div class="flight_search_box">
 <%= form_with method: :get do |form| %>
     Departure Airports
 <%= form.collection_select :departure_id, Airport.order(:code), :id, :code %>
@@ -7,16 +9,29 @@ Welcome to the (Totally real) flight booker!
     flight arrivals
 <%= form.collection_select :flight_id, Flight.order(:arrival_time), :id, :arrival_day  %>
     Passenger count 
-<%= number_field_tag 'quantity', nil, min: 1, max: 4 %>
+<%= number_field_tag 'quantity', 1, min: 1, max: 4 %>
 <%= form.submit %>
 <% end %>
 <% if params.has_key?(:departure_id) %>
 <%= form_with method: :get, url: "bookings/new" do |form| %>
-    <%= form.collection_radio_buttons :flight_id, Flight.valid_flights(params), :id, :departure_time %>
+    <div class="flight_search_result_box">
+    <%= form.collection_radio_buttons :flight_id, Flight.valid_flights(params), :id, :departure_time do |b| %>
+    <%= b.label(class: "child") { b.radio_button(class: "child") } %>
+    <%= b.text %>
+    <% end %>
     <%= form.hidden_field :passengers_num, value: "#{@passenger_count}" %>
     <%= form.submit %>
+    </div>
     <% end %> 
+    </div>
     <% end %>
     <% if @validated_flights.nil? || @validated_flights.empty? %>
+    <div class="no_flights_found">
     No valid flights found. Please enter another search to find flights
+    </div>
     <% end %>
+
+    </div>
+</div>
+
+<%= render "footer_nav_bar" %>
