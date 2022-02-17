@@ -4,6 +4,7 @@ Departure time: <%= @flight.departure_time %>
 Departure airport: <%= @flight.departure_airport.code %>
 Arrival airport: <%= @flight.destination_airport.code %>
 Flight id:  <%= @flight.id %>
+Passenger sign-up form
 <%= form_with model: @booking do |form| %>
         Passengers:
         <%= form.fields_for :passengers do |passenger_form| %>
