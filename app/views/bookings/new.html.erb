@@ -21,21 +21,20 @@ Flight id:  <%= @flight.id %>
 Passenger sign-up form
 </div>
 <%= form_with model: @booking do |form| %>
-<div class="booking_forms">
        
         <%= form.fields_for :passengers do |passenger_form| %>
-            Passenger:
+    <div class="child">
     <%= form.hidden_field :flight_id, value: "#{@flight.id}" %> 
-    <%= passenger_form.text_area :name, size: "20x1" %>
     <%= passenger_form.label :name %>
-    <%= passenger_form.text_area :email, size: "20x1" %>
+    <%= passenger_form.text_area :name, size: "20x1" %>
     <%= passenger_form.label :email %>
-    <%= passenger_form.number_field :age, in: 13..120 %>
+    <%= passenger_form.text_area :email, size: "20x1" %>
     <%= passenger_form.label :age %>
+    <%= passenger_form.number_field :age, in: 13..120 %>
+    </div>
     <% end %>
     <div class="booking_submit_button">
     <%= form.submit %>
-    </div>
     </div>
     <% end %>
 </div>
