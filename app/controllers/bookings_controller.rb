@@ -7,7 +7,6 @@ class BookingsController < ApplicationController
     @passenger_count = params[:passengers_num]
     @booking = Booking.new
     @passenger_count.to_i.times { @booking.passengers.build}
-    #debugger
     else 
         redirect_to root_url, flash:  "Error. No flight selected. Please select a flight before creating a booking."
     end
