@@ -96,11 +96,13 @@ host = 'https://polar-crag-22146.herokuapp.com/' #replace with your own url
 config.action_mailer.default_url_options = { host: host }
 
 # SMTP settings for gmail
+#when running the app please place your gmail username and password
+#Please note do NOT commit your password and revert it if you do.
 config.action_mailer.smtp_settings = {
   :address              => "smtp.gmail.com",
   :port                 => 587,
-  :user_name            => "linkonsat",
-  :password             => "ezhnubnbvpzyespz",
+  :user_name            => <gmail-username>,
+  :password             => <gmail-password>,
   :authentication       => "plain",
   :enable_starttls_auto => true
 }
