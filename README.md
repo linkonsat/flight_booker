@@ -11,7 +11,7 @@ gem install rails
 
 After that you can clone this repository by running. 
  
- ~~~~
+ ~~~
  git clone git@github.com:linkonsat/flight_booker.git
  ~~~
  
@@ -26,7 +26,9 @@ After that you can clone this repository by running.
  After letting these commands run you should be able to run.
  
  ~~~
+ 
  rails server
+ 
  ~~~
  
  At which point enter http://localhost:3000/ in your browser to visit the website locally!
