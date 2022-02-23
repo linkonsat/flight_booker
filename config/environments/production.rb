@@ -101,8 +101,8 @@ config.action_mailer.default_url_options = { host: host }
 config.action_mailer.smtp_settings = {
   :address              => "smtp.gmail.com",
   :port                 => 587,
-  :user_name            => <gmail-username>,
-  :password             => <gmail-password>,
+  :user_name            => linkonsat,
+  :password             => ljpwdnczopgphznl,
   :authentication       => "plain",
   :enable_starttls_auto => true
 }
