@@ -33,7 +33,7 @@
 }
 
 .nav_bar_items {
-    min-width: 100%;
+    min-width: 33%;
     height: 100%;
 }
 
@@ -79,6 +79,7 @@
     flex-direction: row;
     justify-content: space-around;
     height: 115px;
+    width: 100%;
     border-top: solid black;
     background-color: rgb(189, 176, 247);
 }
