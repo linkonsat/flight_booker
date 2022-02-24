@@ -1,7 +1,6 @@
 class BookingsController < ApplicationController
 
   def new
-    #debugger
     if(params.has_key?(:flight_id))
     @flight = Flight.find(params[:flight_id])
     @passenger_count = params[:passengers_num]
