@@ -51,6 +51,10 @@ gem "bootsnap", require: false
 #Adds devise for user registration and related behaviors
 gem 'devise'
 
+#Use simplecov for test coverage
+gem 'simplecov', require: false, group: :test
+  
+
 gem 'letter_opener'
 #Adds 
 group :development, :test do
