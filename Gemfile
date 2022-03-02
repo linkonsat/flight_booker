@@ -53,7 +53,9 @@ gem 'devise'
 
 #Use simplecov for test coverage
 gem 'simplecov', require: false, group: :test
-  
+
+#use sidekiq for background processing and threads to handle multiple jobs.
+gem 'sidekiq'
 
 gem 'letter_opener'
 #Adds 
