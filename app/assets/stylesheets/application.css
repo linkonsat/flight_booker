@@ -61,8 +61,6 @@
 
 .flight_search_result_box {
     height: 100%;
-    width: 31%;
-    border: 3px solid;
     min-width: 31%;
     margin-left: 5px;
 }
