@@ -7,7 +7,7 @@ Your Flight information can be found below.
 </div>
 <div class="booking_form_information">
 <div>
-Departure time: <%= @flight.departure_time %>
+Departure time: <%= @flight.departure_time.to_datetime.strftime("%r") %>
 </div>
 <div>
 Departure airport: <%= @flight.departure_airport.code %>
@@ -25,12 +25,18 @@ Passenger sign-up form
         <%= form.fields_for :passengers do |passenger_form| %>
     <div class="child">
     <%= form.hidden_field :flight_id, value: "#{@flight.id}" %> 
+    <div>
     <%= passenger_form.label :name %>
     <%= passenger_form.text_area :name, size: "20x1" %>
+    </div>
+    <div>
     <%= passenger_form.label :email %>
     <%= passenger_form.text_area :email, size: "20x1" %>
+    </div>
+    <div>
     <%= passenger_form.label :age %>
     <%= passenger_form.number_field :age, in: 13..120 %>
+    </div>
     </div>
     <% end %>
     <div class="booking_submit_button">

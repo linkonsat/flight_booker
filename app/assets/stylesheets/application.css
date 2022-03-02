@@ -55,7 +55,8 @@
 .flight_search_box {
     height: 60%;
     border: aqua solid;
-    width: 30%;
+    width: 300px;
+    border-style: ridge;
 }
 
 .flight_search_result_box {
@@ -97,7 +98,7 @@
 }
 
 .booking_form_information {
-    width: 35%;
+    width: 200px;
     margin-left: 0%;
     margin-bottom: 10px;
 }
