@@ -128,6 +128,9 @@ GEM
     mini_portile2 (2.8.0)
     minitest (5.15.0)
     msgpack (1.4.5)
+    net-http (0.2.0)
+      net-protocol
+      uri
     net-imap (0.2.3)
       digest
       net-protocol
@@ -240,6 +243,7 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    uri (0.11.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.0)
@@ -270,6 +274,7 @@ DEPENDENCIES
   jbuilder
   jsbundling-rails
   letter_opener
+  net-http
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.1)

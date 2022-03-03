@@ -1,8 +1,9 @@
 <%= render "index_nav_bar" %>
+<!--HTML from anywhere-->
 <div class="flight_search_nav_container">
 <div class="flight_search_box">
 <%= form_with method: :get do |form| %>
-    <div>
+    <div data-controller="hello">
     Departure Airports:
 <%= form.collection_select :departure_id, Airport.order(:code), :id, :code %>
 </div>
@@ -43,15 +44,4 @@
 </div>
 <div>
 <%= render "footer_nav_bar" %>
-</div>
-<!--HTML from anywhere-->
-<div data-controller="hello">
-  <input data-hello-target="name" type="text">
-
-  <button data-action="click->hello#greet">
-    Greet
-  </button>
-
-  <span data-hello-target="output">
-  </span>
 </div>

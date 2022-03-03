@@ -3,12 +3,13 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = [ "name", "output" ]
 
-  connect() {
-    console.log(1)
+  hide_departure_airport() {
   }
 
-  greet() {
-    this.outputTarget.textContent =
-      `Hello, ${this.nameTarget.value}!`
+  hide_arrival_airport() {
+  }
+
+  connect() {
+    console.log("Test was a success")
   }
 }
