@@ -1,15 +1,12 @@
 import { Controller } from "@hotwired/stimulus"
 
+// Connects to data-controller="flight-selector"
 export default class extends Controller {
-  static targets = [ "name", "output" ]
-
   hide_departure_airport() {
+
   }
 
   hide_arrival_airport() {
-  }
-
-  connect() {
-    console.log("Test was a success")
+    
   }
 }

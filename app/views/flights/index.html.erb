@@ -3,7 +3,7 @@
 <div class="flight_search_nav_container">
 <div class="flight_search_box">
 <%= form_with method: :get do |form| %>
-    <div data-controller="hello">
+    <div data-controller="flight-selector">
     Departure Airports:
 <%= form.collection_select :departure_id, Airport.order(:code), :id, :code %>
 </div>
