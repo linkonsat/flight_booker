@@ -4,12 +4,15 @@
 <div class="flight_search_box">
 <%= form_with method: :get do |form| %>
     <div data-controller="flight-selector">
+    <div data-action="change->flight-selector#hide_arrival_airport" data-flight-selector-target="arrival_airport">
     Departure Airports:
 <%= form.collection_select :departure_id, Airport.order(:code), :id, :code %>
 </div>
-<div>
+
+<div data-action="change->flight-selector#hide_departure_airport" data-flight-selector-target="departure_airport">
     Arrival airports 
 <%= form.collection_select :destination_id, Airport.order(:code), :id, :code %>
+</div>
 </div>
 <div>
     flight arrivals
