@@ -32,19 +32,19 @@
     <%= b.text %>
     <% end %>
     <%= form.hidden_field :passengers_num, value: "#{@passenger_count}" %>
-    <%= form.submit "submit" %>
     </div>
     <% end %> 
-    </div>
     <% end %>
     <% if @validated_flights.nil? || @validated_flights.empty? %>
     <div class="no_flights_found">
     No valid flights found. Please enter another search to find flights
     </div>
+    <% else %>
+    <%= form.submit "submit" %>
     <% end %>
 
     </div>
 </div>
-<div>
-<%= render "footer_nav_bar" %>
 </div>
+<%= render "footer_nav_bar" %>
+
