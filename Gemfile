@@ -61,6 +61,9 @@ gem 'letter_opener'
 #Adds 
 gem "net-http"
 
+#Adds rubocop for best rails practices.
+gem 'rubocop-rails', require: false
+
 group :development, :test do
   gem 'rspec-rails', '~> 5.0.0'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
