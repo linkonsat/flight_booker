@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PassengerMailer < ApplicationMailer
   def booking_confirmation
     @flight = params[:flight]

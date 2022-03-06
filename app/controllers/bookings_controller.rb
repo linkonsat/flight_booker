@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class BookingsController < ApplicationController
   def new
-    if params.has_key?(:flight_id)
+    if params.key?(:flight_id)
       @flight = Flight.find(params[:flight_id])
       @passenger_count = params[:passengers_num]
       @booking = Booking.new

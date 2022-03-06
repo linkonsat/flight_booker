@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Flight < ApplicationRecord
   has_many :bookings
   belongs_to :destination_airport, class_name: 'Airport'

@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class FlightsController < ApplicationController
   def index
-    if params.has_key?(:departure_id)
+    if params.key?(:departure_id)
       @passenger_count = params[:quantity]
       @validated_flights = Flight.valid_flights(params)
     end
