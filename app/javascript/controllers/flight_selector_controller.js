@@ -8,7 +8,6 @@ export default class extends Controller {
     let selected_id = event.srcElement.selectedIndex;
     let element = this.arrival_airportTarget.childNodes[1];
     this.reveal_airport(element)
-    this.reveal_airport(event.srcElement)
     element[selected_id].style.display = "none"
   }
 
@@ -16,14 +15,15 @@ export default class extends Controller {
     let selected_id = event.srcElement.selectedIndex;
     let element = this.departure_airportTarget.childNodes[1];
     this.reveal_airport(element)
-    this.reveal_airport(event.srcElement)
     element[selected_id].style.display = "none"; 
   }
 
   reveal_airport(element) {
     let loop_count = element.length 
-    for (let i = 1; i < loop_count; i++) {
+    for (let i = 0; i < loop_count; i++) {
       element[i].style.display = ""
     }
   }
 }
+
+//fck then bos then dal

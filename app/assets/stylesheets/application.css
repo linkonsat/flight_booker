@@ -108,3 +108,7 @@
 .booking_information {
     margin-left: 5px;
 }
+
+.dropdown_options {
+    display: contents;
+}
