@@ -1,7 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="flight-selector"
-//error occurs when i "view the other list. It then appears to stop the reveal airport from running"
 export default class extends Controller {
   static targets = ["departure_airport", "arrival_airport"]
   hide_departure_airport(event) {
@@ -25,5 +24,3 @@ export default class extends Controller {
     }
   }
 }
-
-//fck then bos then dal

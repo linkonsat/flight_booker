@@ -27,7 +27,7 @@
     border: 20px;
     justify-content: center;
     height: 12.5%;
-    background-color: rgb(189, 176, 247);
+    background-color: skyblue;
     color: black;
     border-bottom: solid;
 }
@@ -48,7 +48,7 @@
     align-items: center;
     justify-content: center;
     height: 75%;
-    background-color: rgb(189, 176, 247);
+    background-color: whitesmoke;
     color: black;
 }
 
@@ -71,6 +71,7 @@
 
 .no_flights_found {
     border: solid;
+    border-color: aqua;
 }
 
 .footer_nav_bar {
@@ -80,7 +81,7 @@
     height: 115px;
     width: 100%;
     border-top: solid black;
-    background-color: rgb(189, 176, 247);
+    background-color: skyblue;
 }
 
 .booking_forms {
