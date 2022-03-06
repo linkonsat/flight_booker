@@ -6,6 +6,10 @@ class FlightsController < ApplicationController
         end
   end
 
+  def find_flight
+
+  end
+
     def valid_flights_params 
     end
 end
