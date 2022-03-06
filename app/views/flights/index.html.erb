@@ -10,16 +10,16 @@
 </div>
 
 <div data-action="change->flight-selector#hide_departure_airport" data-flight-selector-target="departure_airport">
-    Arrival airports 
+    Arrival airports:
 <%= form.collection_select :destination_id, Airport.order(:code), :id, :code, include_blank: true %>
 </div>
 </div>
 <div>
-    flight arrivals
+    flight arrivals:
 <%= form.collection_select :flight_id, Flight.order(:arrival_time), :id, :arrival_day  %>
 </div>
 <div>
-    Passenger count 
+    Passenger count: 
 <%= number_field_tag 'quantity', 1, min: 1, max: 4 %>
 </div>
 <%= form.submit %>
