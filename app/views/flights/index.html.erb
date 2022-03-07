@@ -16,7 +16,7 @@
 </div>
 <div>
     flight arrivals:
-<%= form.collection_select :flight_id, Flight.order(:arrival_time), :id, :arrival_day  %>
+<%= form.collection_select :flight_id, Flight.unique_flight_days, :id, :arrival_day, include_blank: true  %>
 </div>
 <div>
     Passenger count: 
