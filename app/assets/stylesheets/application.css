@@ -57,6 +57,7 @@
     border: aqua solid;
     width: 300px;
     border-style: ridge;
+    overflow: auto;
 }
 
 .flight_search_result_box {

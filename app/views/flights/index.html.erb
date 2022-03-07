@@ -15,8 +15,8 @@
 </div>
 </div>
 <div>
-    flight arrivals:
-<%= form.collection_select :flight_id, Flight.unique_flight_days, :id, :arrival_day, include_blank: true  %>
+    Flight arrivals:
+<%= form.collection_select :departure_time, Flight.unique_flight_days, :departure_time, :departure_days, include_blank: true  %>
 </div>
 <div>
     Passenger count: 
@@ -27,14 +27,14 @@
 <% if params.has_key?(:departure_id) %>
 <%= form_with method: :get, url: "bookings/new" do |form| %>
     <div class="flight_search_result_box">
-    <%= form.collection_radio_buttons :flight_id, Flight.valid_flights(params), :id, :departure_time do |b| %>
+    <%= form.collection_radio_buttons :flight_id, Flight.valid_flights(params), :id, :departure_times do |b| %>
+    <div>
     <%= b.label(class: "child") { b.radio_button(class: "child") } %>
     <%= b.text %>
+    </div>
     <% end %>
     <%= form.hidden_field :passengers_num, value: "#{@passenger_count}" %>
     </div>
-    <% end %> 
-    <% end %>
     <% if @validated_flights.nil? || @validated_flights.empty? %>
     <div class="no_flights_found">
     No valid flights found. Please enter another search to find flights
@@ -42,9 +42,9 @@
     <% else %>
     <%= form.submit "submit" %>
     <% end %>
-
+    <% end %>
+    <% end %>
     </div>
 </div>
 </div>
 <%= render "footer_nav_bar" %>
-
