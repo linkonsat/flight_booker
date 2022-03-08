@@ -2,7 +2,7 @@
 <div class="flight_search_nav_container">
 <div class="flight_search_box">
 <div class="booking_form_header" >
-Thank you for booking with totally real airlines! We hope you enjoy your flight and come again.You can review your booking information below.Please call 000-000-0000 if you notice any errors.
+Thank you for booking with totally real airlines! We hope you enjoy your flight and come again. You can review your booking information below. Please call 000-000-0000 if you notice any errors.
 </div>
 <div class="booking_information">
 <div>
@@ -12,10 +12,10 @@ destination airport: <%= @booking.flight.destination_airport.code %>
 departure airport: <%= @booking.flight.departure_airport.code %>
 </div>
 <div>
-departure time: <%= @booking.flight.departure_time.to_datetime.strftime("%h") %>
+departure time: <%= @booking.flight.departure_time.to_datetime.strftime('%y-%m-%d-%r') %>
 </div>
 <div>
-arrival time: <%= @booking.flight.arrival_time.to_datetime.strftime("%h") %>
+arrival time: <%= @booking.flight.arrival_time.to_datetime.strftime('%y-%m-%d-%r') %>
 </div>
 </div>
 </div>
