@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 class Passenger < ApplicationRecord
-  has_one :booking
+  belongs_to :booking
 end
