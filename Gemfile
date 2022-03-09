@@ -5,79 +5,30 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.4'
 
-# Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem 'rails', '~> 7.0.1'
 
-# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem 'sprockets-rails'
-
-# Use postgresql as the database for Active Record
-gem 'pg', '~> 1.1'
-
-# Use the Puma web server [https://github.com/puma/puma]
-gem 'puma', '~> 5.0'
-
-# Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
+gem 'bootsnap', require: false
+gem 'devise'
 gem 'jsbundling-rails'
-
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
+gem 'jbuilder'
+gem 'letter_opener'
+gem 'net-http'
+gem 'pg', '~> 1.1'
+gem 'puma', '~> 5.0'
+gem 'rails', '~> 7.0.1'
+gem 'sidekiq'
+gem 'sprockets-rails'
+gem 'redis', '~> 4.0'
+gem 'rubocop-rails', require: false
+gem 'simplecov', require: false, group: :test
+gem 'stimulus-rails'
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'turbo-rails'
 
-# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem 'stimulus-rails'
-
-# Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem 'jbuilder'
-
-# Use Redis adapter to run Action Cable in production
-gem 'redis', '~> 4.0'
-
-# Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
-# gem "kredis"
-
-# Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-
-# Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', require: false
-
-# Use Sass to process CSS
-# gem "sassc-rails"
-
-# Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
-
-# Adds devise for user registration and related behaviors
-gem 'devise'
-
-# Use simplecov for test coverage
-gem 'simplecov', require: false, group: :test
-
-# use sidekiq for background processing and threads to handle multiple jobs.
-gem 'sidekiq'
-
-gem 'letter_opener'
-# Adds
-gem 'net-http'
-
-# Adds rubocop for best rails practices.
-gem 'rubocop-rails', require: false
-
 group :development, :test do
-  gem 'rspec-rails', '~> 5.0.0'
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-
-  # Capybara, the library that allows us to interact with the browser using Ruby
   gem 'capybara'
-
-  # The following gems aids with the nuts and bolts
-  # of interacting with the browser.
-  gem 'webdriver'
-
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'rspec-rails', '~> 5.0.0'
+  gem 'webdriver'
 end
 
 group :development do
