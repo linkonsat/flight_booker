@@ -8,7 +8,9 @@ class FlightsController < ApplicationController
     end
   end
 
-  def find_flight; end
+  def find_flight   
+    found_flight = Passenger.find_flight(params[:passenger_email])
+  end
 
   def valid_flights_params; end
 end
