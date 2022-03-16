@@ -9,7 +9,9 @@ class FlightsController < ApplicationController
   end
 
   def find_flight   
-    found_flight = Passenger.find_flight(params[:passenger_email])
+    found_flight = Flight.find_flight(params)
+    flight = found_flight.to_json
+    response.headers["flight"] = "#{flight}"
   end
 
   def valid_flights_params; end
