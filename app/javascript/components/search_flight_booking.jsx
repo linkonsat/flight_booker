@@ -28,6 +28,7 @@ class BookingData extends React.Component {
     handleSubmit(event) {
         fetch(`/find_flight?passenger_email=${event.target.email.value}&flight_id=${event.target.flight_id.value}`)
         .then(function(response) {
+          console.log(response.headers.get("flight"))
         let flight_data = JSON.parse(response.headers.get("flight"))
         ReactDOM.render(<FlightDisplay props={flight_data} />, document.getElementById("result"))
         })

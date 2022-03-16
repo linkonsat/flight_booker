@@ -9,8 +9,31 @@ class Flight < ApplicationRecord
     departure_time.to_datetime.strftime('%r')
   end
 
+  def arrival_times
+    arrival_time.to_datetime.strftime('%r')
+  end
+
   def departure_days
     departure_time.to_datetime.strftime('%y-%m-%d')
+  end
+
+  def flight_info
+  
+    flight_info = {:id => self.id, :departure_airport => self.departure_airport.code,
+    :destination_airport => self.destination_airport.code, :departure_time => self.departure_times,
+    :arrival_time => self.arrival_times}
+  end
+
+  def self.find_flight(params)
+    flight = Flight.where("id = ?", params[:flight_id])
+    flight.first.bookings.each do |flight_bookings|
+      flight_bookings.passengers.each do |passenger|
+        if(passenger.email == params[:passenger_email])
+          return flight 
+        end
+      end
+    end
+    return []
   end
 
   def self.valid_flights(params)
