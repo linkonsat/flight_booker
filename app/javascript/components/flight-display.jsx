@@ -6,7 +6,6 @@ class FlightDisplay extends React.Component {
     constructor(props) {
         super(props);
         this.state = {props}
-        console.log(this.props.props.id)
     }
 
     componentDidMount() {

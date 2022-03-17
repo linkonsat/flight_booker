@@ -1,6 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import FlightDisplay from "./FlightDisplay.jsx"
+import FlightDisplay from "./flight-display.jsx"
+import CustomErrors from "./custom-errors.jsx"
 
 class BookingData extends React.Component {
     constructor(props) {
@@ -26,12 +27,16 @@ class BookingData extends React.Component {
 
     }
     handleSubmit(event) {
+      const resultElement = document.getElementById("result")
         fetch(`/find_flight?passenger_email=${event.target.email.value}&flight_id=${event.target.flight_id.value}`)
         .then(function(response) {
-          console.log(response.headers.get("flight"))
-        let flight_data = JSON.parse(response.headers.get("flight"))
-        ReactDOM.render(<FlightDisplay props={flight_data} />, document.getElementById("result"))
-        })
+          if(response.ok) {
+            let flight_data = JSON.parse(response.headers.get("flight"))
+            ReactDOM.render(<FlightDisplay props={flight_data} />, resultElement)
+          } else {
+            ReactDOM.render(<CustomErrors props={response.status} />, resultElement )
+          }
+      })
         event.preventDefault();
     }
 
