@@ -1,24 +1,11 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/macdaniel/Documents/flight_booker/spec/controller/flights_controller_spec.rb": {
+      "/home/macdaniel/Documents/flight_booker/spec/channels/test_channel_spec.rb": {
         "lines": [
-
-        ]
-      },
-      "/home/macdaniel/Documents/flight_booker/spec/helpers/bookings_helper_spec.rb": {
-        "lines": [
+          null,
+          null,
           1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           1,
           1,
@@ -27,6 +14,8 @@
       },
       "/home/macdaniel/Documents/flight_booker/spec/rails_helper.rb": {
         "lines": [
+          null,
+          null,
           null,
           1,
           1,
@@ -102,6 +91,8 @@
       "/home/macdaniel/Documents/flight_booker/config/environment.rb": {
         "lines": [
           null,
+          null,
+          null,
           1,
           null,
           null,
@@ -110,6 +101,8 @@
       },
       "/home/macdaniel/Documents/flight_booker/config/application.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
@@ -136,6 +129,8 @@
       },
       "/home/macdaniel/Documents/flight_booker/config/boot.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
@@ -144,6 +139,8 @@
       },
       "/home/macdaniel/Documents/flight_booker/config/environments/test.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           null,
@@ -211,6 +208,8 @@
           null,
           null,
           null,
+          null,
+          null,
           1,
           null,
           null,
@@ -224,6 +223,7 @@
       },
       "/home/macdaniel/Documents/flight_booker/config/initializers/content_security_policy.rb": {
         "lines": [
+          null,
           null,
           null,
           null,
@@ -572,6 +572,8 @@
           null,
           null,
           null,
+          null,
+          null,
           1,
           null,
           null
@@ -579,6 +581,7 @@
       },
       "/home/macdaniel/Documents/flight_booker/config/initializers/inflections.rb": {
         "lines": [
+          null,
           null,
           null,
           null,
@@ -609,14 +612,18 @@
           null,
           null,
           null,
+          null,
           null
         ]
       },
       "/home/macdaniel/Documents/flight_booker/config/routes.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           null,
+          1,
           1,
           1,
           1,
@@ -627,6 +634,8 @@
       },
       "/home/macdaniel/Documents/flight_booker/app/models/user.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           null,
@@ -637,6 +646,8 @@
       },
       "/home/macdaniel/Documents/flight_booker/app/models/application_record.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           null
@@ -644,24 +655,84 @@
       },
       "/home/macdaniel/Documents/flight_booker/app/helpers/application_helper.rb": {
         "lines": [
+          null,
+          null,
           1,
           null
         ]
       },
       "/home/macdaniel/Documents/flight_booker/app/helpers/bookings_helper.rb": {
         "lines": [
+          null,
+          null,
           1,
           null
         ]
       },
       "/home/macdaniel/Documents/flight_booker/app/helpers/flights_helper.rb": {
         "lines": [
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/home/macdaniel/Documents/flight_booker/app/channels/test_channel.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/home/macdaniel/Documents/flight_booker/app/channels/application_cable/channel.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/macdaniel/Documents/flight_booker/spec/controller/flights_controller_spec.rb": {
+        "lines": [
+
+        ]
+      },
+      "/home/macdaniel/Documents/flight_booker/spec/helpers/bookings_helper_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
           1,
           null
         ]
       },
       "/home/macdaniel/Documents/flight_booker/spec/helpers/flights_helper_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           null,
@@ -681,6 +752,8 @@
       },
       "/home/macdaniel/Documents/flight_booker/spec/mailers/passenger_mailer_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
@@ -690,14 +763,14 @@
       },
       "/home/macdaniel/Documents/flight_booker/app/mailers/passenger_mailer.rb": {
         "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
           null,
           null,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
           null,
           null,
           null
@@ -705,6 +778,8 @@
       },
       "/home/macdaniel/Documents/flight_booker/app/mailers/application_mailer.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -713,6 +788,8 @@
       },
       "/home/macdaniel/Documents/flight_booker/spec/models/airport_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
@@ -722,6 +799,8 @@
       },
       "/home/macdaniel/Documents/flight_booker/app/models/airport.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -730,6 +809,8 @@
       },
       "/home/macdaniel/Documents/flight_booker/spec/models/booking_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
@@ -739,6 +820,8 @@
       },
       "/home/macdaniel/Documents/flight_booker/app/models/booking.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -748,6 +831,8 @@
       },
       "/home/macdaniel/Documents/flight_booker/spec/models/flight_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
@@ -757,31 +842,58 @@
       },
       "/home/macdaniel/Documents/flight_booker/app/models/flight.rb": {
         "lines": [
-          1,
-          1,
-          1,
-          1,
           null,
           null,
           1,
-          108,
-          108,
-          108,
+          1,
+          1,
+          1,
+          6,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          30,
           null,
           null,
           1,
           null,
-          8,
-          8,
+          0,
           null,
-          8,
           null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          0,
+          0,
           null,
           null
         ]
       },
       "/home/macdaniel/Documents/flight_booker/spec/models/passenger_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
@@ -791,6 +903,9 @@
       },
       "/home/macdaniel/Documents/flight_booker/app/models/passenger.rb": {
         "lines": [
+          null,
+          null,
+          1,
           1,
           1,
           null
@@ -798,6 +913,8 @@
       },
       "/home/macdaniel/Documents/flight_booker/spec/models/user_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
@@ -807,6 +924,8 @@
       },
       "/home/macdaniel/Documents/flight_booker/spec/requests/bookings_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
@@ -818,6 +937,8 @@
       },
       "/home/macdaniel/Documents/flight_booker/spec/requests/flights_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
@@ -829,6 +950,8 @@
       },
       "/home/macdaniel/Documents/flight_booker/spec/system/bookings_creation_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
@@ -836,16 +959,16 @@
           1,
           1,
           1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           null,
           null,
           null
@@ -853,6 +976,8 @@
       },
       "/home/macdaniel/Documents/flight_booker/spec/system/root_index_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
@@ -865,27 +990,27 @@
           1,
           1,
           1,
-          1,
-          1,
-          1,
+          0,
+          0,
+          0,
           null,
           1,
           1,
           1,
-          1,
-          1,
-          1,
-          1,
+          0,
+          0,
+          0,
+          0,
           null,
           1,
           1,
           1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           null,
           null,
           null
@@ -900,6 +1025,8 @@
           null,
           null,
           null,
+          null,
+          null,
           1,
           1,
           1,
@@ -907,36 +1034,85 @@
           1,
           1,
           1,
+          null,
           1,
+          null,
           1,
+          null,
           1,
+          null,
           1,
+          null,
           1,
+          null,
           1,
+          null,
           1,
+          null,
           1,
+          null,
           1,
+          null,
           1,
-          1
+          null,
+          1,
+          null,
+          1,
+          null,
+          5,
+          null,
+          null,
+          null,
+          1,
+          5,
+          null,
+          null,
+          null,
+          1,
+          5,
+          null,
+          null,
+          null,
+          1,
+          5,
+          null,
+          null,
+          null,
+          1,
+          5,
+          null,
+          null
         ]
       },
       "/home/macdaniel/Documents/flight_booker/app/controllers/flights_controller.rb": {
         "lines": [
-          1,
-          1,
-          9,
-          4,
-          4,
-          null,
           null,
           null,
           1,
+          1,
+          5,
+          0,
+          0,
           null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
           null
         ]
       },
       "/home/macdaniel/Documents/flight_booker/app/controllers/application_controller.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           null,
@@ -944,50 +1120,11 @@
           null,
           1,
           0,
-          null,
-          null
-        ]
-      },
-      "/home/macdaniel/Documents/flight_booker/app/controllers/bookings_controller.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          2,
-          2,
-          2,
-          2,
-          4,
-          null,
-          0,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          2,
-          1,
-          null,
-          0,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1646262654
+    "timestamp": 1647480318
   }
 }

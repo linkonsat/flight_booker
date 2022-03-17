@@ -24,6 +24,9 @@
 </div>
 <%= form.submit %>
 <% end %>
+<div class="no_flights_found">
+No valid flights found. Please enter another search to find flights
+</div>
 <% if params.has_key?(:departure_id) %>
 <%= form_with method: :get, url: "bookings/new" do |form| %>
     <div class="flight_search_result_box">
@@ -35,13 +38,7 @@
     <% end %>
     <%= form.hidden_field :passengers_num, value: "#{@passenger_count}" %>
     </div>
-    <% if @validated_flights.nil? || @validated_flights.empty? %>
-    <div class="no_flights_found">
-    No valid flights found. Please enter another search to find flights
-    </div>
-    <% else %>
     <%= form.submit "submit" %>
-    <% end %>
     <% end %>
     <% end %>
     </div>

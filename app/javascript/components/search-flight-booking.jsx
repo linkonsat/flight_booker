@@ -59,7 +59,6 @@ class BookingData extends React.Component {
             </div>
             <input type="submit" value="Submit" />
           </form>
-          <div>Enter</div>
           </div>
 
         );

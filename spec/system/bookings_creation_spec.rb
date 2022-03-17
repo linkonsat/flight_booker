@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'Flight index', type: :system do
   describe 'create bookings page' do
-    it 'Succesffuly creates a booking.' do
+    it 'Succesfuly creates a booking.' do
       visit '/'
       page.select 'LAX', from: 'departure_id'
       page.select 'SFO', from: 'destination_id'
