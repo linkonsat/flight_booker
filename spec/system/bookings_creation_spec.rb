@@ -8,6 +8,7 @@ RSpec.describe 'Flight index', type: :system do
       visit '/'
       page.select 'LAX', from: 'departure_id'
       page.select 'SFO', from: 'destination_id'
+      page.select '12-08-29', from: 'departure_time'
       fill_in 'quantity', with: '1'
       click_on 'Save'
       choose(option: '2')
