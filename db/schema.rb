@@ -21,11 +21,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_09_062244) do
   end
 
   create_table "bookings", force: :cascade do |t|
-    t.integer "passenger_id"
     t.integer "flight_id"
     t.string "status"
-    t.string "name"
-    t.string "email"
   end
 
   create_table "flights", force: :cascade do |t|
@@ -38,7 +35,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_09_062244) do
 
   create_table "passengers", force: :cascade do |t|
     t.string "name"
-    t.string "age"
+    t.integer "age"
     t.string "email"
     t.bigint "booking_id"
     t.bigint "user_id"
@@ -60,7 +57,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_09_062244) do
   end
 
   add_foreign_key "bookings", "flights"
-  add_foreign_key "bookings", "passengers"
   add_foreign_key "flights", "airports", column: "departure_airport_id"
   add_foreign_key "flights", "airports", column: "destination_airport_id"
 end

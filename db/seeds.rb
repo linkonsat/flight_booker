@@ -62,3 +62,6 @@ for i in 1..5 do
     Flight.create!(destination_airport_id: 5, departure_time: DateTime.new(2012, 8, i, 22, 35, 0).to_s,
     arrival_time: DateTime.new(2012, 10, i, 22, 39, 0).to_s, departure_area: 'Terminal A1', departure_airport_id: i)   
 end
+
+Booking.create!(:flight_id => 2, :status => "valid")
+Passenger.create!(:name => "testuser", :age => 55, :email => "testuser@gmail.com", :booking_id => 1)
