@@ -25,6 +25,7 @@ class Flight < ApplicationRecord
   end
 
   def self.find_flight(params)
+    #debugger
     flight = Flight.where("id = ?", params[:flight_id])
     flight.first.bookings.each do |flight_bookings|
       flight_bookings.passengers.each do |passenger|
