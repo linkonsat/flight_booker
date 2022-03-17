@@ -27,7 +27,9 @@ gem 'turbo-rails'
 group :development, :test do
   gem 'capybara'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem "factory_bot_rails"
   gem 'rspec-rails', '~> 5.0.0'
+  gem 'selenium-webdriver'
   gem 'webdriver'
 end
 

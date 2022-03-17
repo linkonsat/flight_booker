@@ -18,6 +18,7 @@
           null,
           null,
           1,
+          null,
           1,
           1,
           null,
@@ -50,11 +51,6 @@
           null,
           null,
           1,
-          1,
-          null,
-          null,
-          null,
-          1,
           null,
           1,
           null,
@@ -65,6 +61,7 @@
           null,
           null,
           null,
+          1,
           null,
           null,
           null,
@@ -677,6 +674,13 @@
           null
         ]
       },
+      "/home/macdaniel/Documents/flight_booker/spec/support/factory_bot.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
       "/home/macdaniel/Documents/flight_booker/app/channels/test_channel.rb": {
         "lines": [
           null,
@@ -1112,6 +1116,6 @@
         ]
       }
     },
-    "timestamp": 1647495451
+    "timestamp": 1647532681
   }
 }
