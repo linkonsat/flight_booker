@@ -13,12 +13,13 @@
   },
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "test" : "jest"
+    "test": "jest"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
+    "@testing-library/react": "^12.1.4",
     "babel-loader": "^8.2.3",
     "jest": "^27.5.1",
     "webpack": "^5.70.0",
