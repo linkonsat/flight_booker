@@ -1,6 +1,6 @@
 <%= render "top_nav_bar" %>
 <div class="flight_search_nav_container">
-<div class="flight_search_box">
+  <div class="flight_search_box">
 <div class="booking_form_header" >
 Thanks for choosing new day(very real) airlines.
 Your Flight information can be found below.
@@ -20,29 +20,29 @@ Flight id:  <%= @flight.id %>
 </div>
 Passenger sign-up form
 </div>
-<%= form_with model: @booking do |form| %>
+    <%= form_with model: @booking do |form| %>
        
-        <%= form.fields_for :passengers do |passenger_form| %>
-    <div class="child">
-    <%= form.hidden_field :flight_id, value: "#{@flight.id}" %> 
-    <div>
-    <%= passenger_form.label :name %>
-    <%= passenger_form.text_area :name, size: "20x1" %>
-    </div>
-    <div>
-    <%= passenger_form.label :email %>
-    <%= passenger_form.text_area :email, size: "20x1" %>
-    </div>
-    <div>
-    <%= passenger_form.label :age %>
-    <%= passenger_form.number_field :age, in: 13..120 %>
-    </div>
-    </div>
+      <%= form.fields_for :passengers do |passenger_form| %>
+        <div class="child">
+        <%= form.hidden_field :flight_id, value: "#{@flight.id}" %> 
+        <div>
+        <%= passenger_form.label :name %>
+        <%= passenger_form.text_area :name, size: "20x1" %>
+        </div>
+        <div>
+        <%= passenger_form.label :email %>
+        <%= passenger_form.text_area :email, size: "20x1" %>
+        </div>
+        <div>
+        <%= passenger_form.label :age %>
+        <%= passenger_form.number_field :age, in: 13..120 %>
+        </div>
+        </div>
+        <% end %>
+        <div class="booking_submit_button">
+          <%= form.submit %>
+        </div>
     <% end %>
-    <div class="booking_submit_button">
-    <%= form.submit %>
     </div>
-    <% end %>
-</div>
-</div>
+  </div>
 <%= render "flights/footer_nav_bar" %>

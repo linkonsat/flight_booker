@@ -39,10 +39,10 @@ RSpec.describe 'Flight index', type: :system do
       expect(page).to have_content('Passenger sign-up form')
     end
 
-    it "test" do 
+    it 'test' do
       visit '/find_flight'
       fill_in 'email', with: 'testuser@gmail.com'
-      fill_in 'flight_id', with: '2' 
+      fill_in 'flight_id', with: '2'
       click_on 'Submit'
       expect(page).to have_content('Departure airport: LAX')
     end

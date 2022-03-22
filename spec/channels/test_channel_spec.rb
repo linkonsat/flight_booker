@@ -3,5 +3,4 @@
 require 'rails_helper'
 
 RSpec.describe TestChannel, type: :channel do
-
 end

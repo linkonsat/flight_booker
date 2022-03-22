@@ -13,5 +13,4 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe FlightsHelper, type: :helper do
-
 end

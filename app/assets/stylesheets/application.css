@@ -23,6 +23,7 @@
  html {
     height: 100%;
  }
+ 
 .nav_bar_container {
     display: flex;
     border: 20px;
