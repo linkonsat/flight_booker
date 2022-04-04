@@ -9,12 +9,14 @@ class FlightsController < ApplicationController
   end
 
   def find_flight
-    unless params[:passenger_email].nil?
-      found_flight = Flight.find_flight(params)
-      flight_details = found_flight.first.flight_info
-      flight = flight_details.to_json
-      response.headers['flight'] = flight.to_s
-    end
+  end
+
+  def flight_search 
+    puts params
+    found_flight = Flight.find_flight(params)
+    flight_details = found_flight.first.flight_info
+    flight = flight_details.to_json
+    response.headers['flight'] = flight.to_s
   end
 
   def valid_flights_params; end
