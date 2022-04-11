@@ -24,8 +24,7 @@ gem 'turbo-rails'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :test do
-  gem 'database_cleaner-active_record'
-  gem 'database_cleaner-redis'
+  gem 'database_cleaner-active_record'  
 end
 
 group :development, :test do
