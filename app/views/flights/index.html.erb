@@ -23,9 +23,9 @@
       </div>
       <%= form.submit %>
     <% end %>
-    <% if @validated_flights.nil? %>
+    <% if @validated_flights.nil? || @validated_flights.empty? %>
       <div class="no_flights_found">
-        No valid flights found. Please enter another search to find flights
+        No valid flights found. Please enter another search to find flights.
       </div>
     <% end %>
       <% if params.has_key?(:departure_id) %>
