@@ -20,7 +20,7 @@ class CustomErrors extends React.Component {
         render() {
             return (
                 <div>
-            <div> Looks like you ran into a error {this.props.props} </div>
+            <div> The flight was not found. Please enter your search again. </div>
             </div>
         )
         
