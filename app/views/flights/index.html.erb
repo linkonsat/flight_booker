@@ -3,25 +3,32 @@
   <div class="flight_search_box">
     <%= form_with method: :get do |form| %>
       <div data-controller="flight-selector">
-        <div data-action="change->flight-selector#hide_arrival_airport" data-flight-selector-target="arrival_airport">
-          Departure Airports:
-          <%= form.collection_select :departure_id, Airport.order(:code), :id, :code, include_blank: true %>
-        </div>
+        <div class="flight_search_options">
+          <div class="flight_search-column">
+            <div class="flight_search_option" data-action="change->flight-selector#hide_arrival_airport" data-flight-selector-target="arrival_airport">
+              Departure Airports:
+              <%= form.collection_select :departure_id, Airport.order(:code), :id, :code, include_blank: true %>
+            </div>
 
-        <div data-action="change->flight-selector#hide_departure_airport" data-flight-selector-target="departure_airport">
-          Arrival airports:
-          <%= form.collection_select :destination_id, Airport.order(:code), :id, :code, include_blank: true %>
-        </div>
-      </div>
-      <div>
-        Flight arrivals:
-        <%= form.collection_select :departure_time, Flight.unique_flight_days, :departure_time, :departure_days, include_blank: true  %>
-      </div>
-      <div>
-        Passenger count: 
-        <%= number_field_tag 'quantity', 1, min: 1, max: 4 %>
-      </div>
-      <%= form.submit %>
+            <div class="flight_search_option" data-action="change->flight-selector#hide_departure_airport" data-flight-selector-target="departure_airport">
+              Arrival airports:
+              <%= form.collection_select :destination_id, Airport.order(:code), :id, :code, include_blank: true %>
+            </div>
+          </div>
+          <div class="flight_search_column">
+            <div class="flight_search_option">
+              Flight arrivals:
+              <%= form.collection_select :departure_time, Flight.unique_flight_days, :departure_time, :departure_days, include_blank: true  %>
+            </div>
+            <div class="flight_search_option">
+              Passenger count: 
+              <%= number_field_tag 'quantity', 1, min: 1, max: 4 %>
+            </div>
+            </div>
+          </div>
+             <div class="flight_search_option">
+               <%= form.submit "Search" %>
+             </div>
     <% end %>
     <% if @validated_flights.nil? || @validated_flights.empty? %>
       <div class="no_flights_found">
@@ -32,14 +39,25 @@
         <%= form_with method: :get, url: "bookings/new" do |form| %>
           <div class="flight_search_result_box">
             <%= form.collection_radio_buttons :flight_id, Flight.valid_flights(params), :id, :departure_times do |b| %>
-            <div>
-              <%= b.label(class: "child") { b.radio_button(class: "child") } %>
-              <%= b.text %>
+              <div class="flight_search_option"">
+                <div>
+                <div> 
+                From <%= b.object.departure_airport.code %> 
+                to <%= b.object.destination_airport.code %>
+                </div>
+                
+                <%= b.label(class: "child") { b.radio_button(class: "child") } %>
+                Departing at <%= b.text %>
+                </div>
+                arriving at <%= b.object.arrival_time.to_datetime.strftime('%r') %>
+                </div>
+              </div>
           </div>
         <% end %>
         <%= form.hidden_field :passengers_num, value: "#{@passenger_count}" %>
-          </div>
+          
         <%= form.submit "submit" %>
+        </div>
       <% end %>   
     <% end %>
     </div>

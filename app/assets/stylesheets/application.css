@@ -27,21 +27,12 @@
 .nav_bar_container {
     display: flex;
     border: 20px;
-    justify-content: center;
+    justify-content: space-between;
     height: 12.5%;
     background-color: skyblue;
     color: black;
     border-bottom: solid;
-}
-
-.nav_bar_items {
-    min-width: 33%;
-    height: 100%;
-}
-
-.top_nav_bar_items {
-    width: 100%;
-    height: 100%;
+    align-items: center;
 }
 
 .flight_search_nav_container {
@@ -60,12 +51,32 @@
     width: 300px;
     border-style: ridge;
     overflow: auto;
+    padding: 5px;
 }
 
 .flight_search_result_box {
     height: 100%;
     min-width: 31%;
-    margin-left: 5px;
+
+}
+
+.flight_search_option {
+    margin-bottom: 5px;
+    border-right: 5px;
+    border: solid 3px grey;
+    padding: 3px;
+    border-radius: 10px;
+    box-shadow: 3px 3px black;
+}
+
+.flight_search_options {
+    display: flex;
+    column-count: 2;
+}
+
+.flight_search-column {
+    margin-right: 5px;
+    margin-bottom: 5px;
 }
 .child {
     border-bottom: 10px;
@@ -73,8 +84,7 @@
 }
 
 .no_flights_found {
-    border: solid;
-    border-color: aqua;
+    padding-top: 5px;   
 }
 
 .footer_nav_bar {
@@ -85,6 +95,7 @@
     width: 100%;
     border-top: solid black;
     background-color: skyblue;
+    align-items: center;
 }
 
 .booking_forms {
