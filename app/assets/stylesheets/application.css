@@ -47,26 +47,40 @@
 
 .flight_search_box {
     height: 60%;
-    border: aqua solid;
+    border: black ridge;
     width: 300px;
-    border-style: ridge;
     overflow: auto;
     padding: 5px;
+    overflow: auto;
+    background-color: whitesmoke;
 }
 
 .flight_search_result_box {
     height: 100%;
     min-width: 31%;
+}
 
+.radio_button_text {
+    margin-left: 5px;
 }
 
 .flight_search_option {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     border-right: 5px;
     border: solid 3px grey;
     padding: 3px;
     border-radius: 10px;
     box-shadow: 3px 3px black;
+}
+
+.flight_result_option {
+    margin-bottom: 10px;
+    border-right: 5px;
+    border: solid 3px rgb(170, 1, 1);
+    padding: 3px;
+    border-radius: 10px;
+    box-shadow: 3px 3px black;
+    margin-left: 5px;
 }
 
 .flight_search_options {

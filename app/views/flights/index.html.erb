@@ -39,17 +39,19 @@
         <%= form_with method: :get, url: "bookings/new" do |form| %>
           <div class="flight_search_result_box">
             <%= form.collection_radio_buttons :flight_id, Flight.valid_flights(params), :id, :departure_times do |b| %>
-              <div class="flight_search_option"">
+              <div class="flight_result_option"">
                 <div>
-                <div> 
-                From <%= b.object.departure_airport.code %> 
-                to <%= b.object.destination_airport.code %>
-                </div>
-                
-                <%= b.label(class: "child") { b.radio_button(class: "child") } %>
-                Departing at <%= b.text %>
-                </div>
-                arriving at <%= b.object.arrival_time.to_datetime.strftime('%r') %>
+                  <div class="radio_button_text"> 
+                    From <%= b.object.departure_airport.code %> 
+                    to <%= b.object.destination_airport.code %>
+                  </div>
+                  <div>
+                    <%= b.label(class: "child") { b.radio_button(class: "child") } %>
+                    Departing at <%= b.text %>
+                  </div>
+                  <div class="radio_button_text">
+                    arriving at <%= b.object.arrival_time.to_datetime.strftime('%r') %>
+                  </div>
                 </div>
               </div>
           </div>
