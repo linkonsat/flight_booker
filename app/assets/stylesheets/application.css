@@ -18,21 +18,31 @@
      margin: 0;
      height: 100%;
      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
- }
+    
+}
 
  html {
     height: 100%;
  }
  
+ a:link {
+    color: white;
+  }
+  
+  a:visited {
+    color: white;
+  }
+
 .nav_bar_container {
     display: flex;
     border: 20px;
     justify-content: space-between;
     height: 12.5%;
-    background-color: skyblue;
-    color: black;
+    background-color: rgb(1, 112, 156);
     border-bottom: solid;
+    border-color: black;
     align-items: center;
+    color: white;
 }
 
 .flight_search_nav_container {
@@ -43,6 +53,8 @@
     height: 75%;
     background-color: whitesmoke;
     color: black;
+    background-image: url(https://images.unsplash.com/photo-1597200381847-30ec200eeb9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+    background-size: 100%;
 }
 
 .flight_search_box {
@@ -52,7 +64,6 @@
     overflow: auto;
     padding: 5px;
     overflow: auto;
-    background-color: whitesmoke;
 }
 
 .flight_search_result_box {
@@ -108,8 +119,9 @@
     height: 115px;
     width: 100%;
     border-top: solid black;
-    background-color: skyblue;
+    background-color: rgb(1, 112, 156);
     align-items: center;
+    color: white;
 }
 
 .booking_forms {
