@@ -59,7 +59,7 @@
 
 .flight_search_box {
     height: 60%;
-    border: black ridge;
+    border: ridge 5px skyblue;
     width: 300px;
     overflow: auto;
     padding: 5px;
@@ -136,7 +136,6 @@
 }
 
 .booking_form_information {
-    width: 200px;
     margin-left: 0%;
     margin-bottom: 10px;
 }
