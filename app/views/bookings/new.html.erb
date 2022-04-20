@@ -1,8 +1,11 @@
 <%= render "top_nav_bar" %>
 <div class="flight_search_nav_container">
+<h2> New Day Airlines
+</h2>
   <div class="flight_search_box">
     <div class="booking_form_header" >
-      Thanks for choosing new day(very real) airlines.
+      Thanks for choosing New Day Airlines(very real).
+      Please make sure to present the email at the terminal.
       Your Flight information can be found below.
     </div>
     <div class="booking_form_information">
@@ -25,15 +28,15 @@
       <%= form.fields_for :passengers do |passenger_form| %>
         <div class="child">
           <%= form.hidden_field :flight_id, value: "#{@flight.id}" %> 
-        <div>
+        <div class="flight_search_option">
           <%= passenger_form.label :name %>
           <%= passenger_form.text_area :name, size: "20x1" %>
         </div>
-        <div>
+        <div class="flight_search_option">
           <%= passenger_form.label :email %>
           <%= passenger_form.text_area :email, size: "20x1" %>
         </div>
-        <div>
+        <div class="flight_search_option">
           <%= passenger_form.label :age %>
           <%= passenger_form.number_field :age, in: 13..120 %>
         </div>
