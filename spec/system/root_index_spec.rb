@@ -20,7 +20,7 @@ RSpec.describe 'Flight index', type: :system do
       page.select '12-08-29', from: 'departure_time'
       fill_in 'quantity', with: '1'
       debugger
-      click_on 'Save'
+      click_on 'Search'
       expect(page).to have_content('No valid flights found. Please enter another search to find flights.')
     end
     it 'Should display a flight if a flight is found' do
@@ -32,7 +32,7 @@ RSpec.describe 'Flight index', type: :system do
       page.select 'SFO', from: 'destination_id'
       page.select '12-08-29', from: 'departure_time'
       fill_in 'quantity', with: '1'
-      click_on 'Save'
+      click_on 'Search'
       expect(page).to have_content('10:35:00 PM')
     end
     it 'Should load the passenger signup form is selected' do
@@ -44,7 +44,7 @@ RSpec.describe 'Flight index', type: :system do
       page.select 'SFO', from: 'destination_id'
       page.select '12-08-29', from: 'departure_time'
       fill_in 'quantity', with: '1'
-      click_on 'Save'
+      click_on 'Search'
       choose(option: '1')
       click_on 'submit'
       expect(page).to have_content('Passenger sign-up form')

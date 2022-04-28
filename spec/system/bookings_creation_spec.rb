@@ -12,7 +12,7 @@ RSpec.describe 'Flight index', type: :system do
       page.select 'SFO', from: 'destination_id'
       page.select '12-08-29', from: 'departure_time'
       fill_in 'quantity', with: '1'
-      click_on 'Save'
+      click_on 'Search'
       choose(option: '1')
       click_on 'submit'
       fill_in 'booking_passengers_attributes_0_name', with: 'bob'
