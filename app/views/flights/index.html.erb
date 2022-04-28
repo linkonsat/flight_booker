@@ -9,18 +9,18 @@
           <div class="flight_search-column">
             <div class="flight_search_option" data-action="change->flight-selector#hide_arrival_airport" data-flight-selector-target="arrival_airport">
               Departure Airports:
-              <%= form.collection_select :departure_id, Airport.order(:code), :id, :code, include_blank: true %>
+              <%= form.collection_select :departure_id, Airport.order(:code), :id, :code %>
             </div>
 
             <div class="flight_search_option" data-action="change->flight-selector#hide_departure_airport" data-flight-selector-target="departure_airport">
               Arrival airports:
-              <%= form.collection_select :destination_id, Airport.order(:code), :id, :code, include_blank: true %>
+              <%= form.collection_select :destination_id, Airport.order(:code), :id, :code %>
             </div>
           </div>
           <div class="flight_search_column">
             <div class="flight_search_option">
               Flight arrivals:
-              <%= form.collection_select :departure_time, Flight.unique_flight_days, :departure_time, :departure_days, include_blank: true  %>
+              <%= form.collection_select :departure_time, Flight.unique_flight_days, :departure_time, :departure_days %>
             </div>
             <div class="flight_search_option">
               Passenger count: 
@@ -62,10 +62,11 @@
 
         
         <% end %>
-          <%= form.submit "submit" %>
+        <%= form.submit "submit" %>
         <% end %>   
       <% end %>
     </div>
+  </div>
   </div>
 </div>
 <%= render "footer_nav_bar" %>
