@@ -2,7 +2,7 @@
 
 class FlightsController < ApplicationController
   def index
-    if params.key?(:departure_id)
+    if !params[:departure_id].nil?
       @passenger_count = params[:quantity]
       @validated_flights = Flight.valid_flights(params)
     end
@@ -18,5 +18,6 @@ class FlightsController < ApplicationController
     response.headers['flight'] = flight.to_s
   end
 
-  def valid_flights_params; end
+  def valid_flights_params 
+  end
 end
