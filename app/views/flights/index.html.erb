@@ -36,8 +36,7 @@
       <div class="no_flights_found">
         No valid flights found. Please enter another search to find flights.
       </div>
-    <% end %>
-      <% if params.has_key?(:departure_id) %>
+    <% else %>
         <%= form_with method: :get, url: "bookings/new" do |form| %>
           <div class="flight_search_result_box">
             <%= form.collection_radio_buttons :flight_id, Flight.valid_flights(params), :id, :departure_times do |b| %>
@@ -59,7 +58,6 @@
           </div>
         
         <%= form.hidden_field :passengers_num, value: "#{@passenger_count}" %>
-
         
         <% end %>
         <%= form.submit "submit" %>
