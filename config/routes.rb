@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'flights#index'
   resources :flights
   resources :bookings
+  resources :promo_codes
   get 'find_flight', to: 'flights#find_flight'
   get 'flight_search', to: 'flights#flight_search'
   # Defines the root path route ("/")
