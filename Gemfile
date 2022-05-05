@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.6'
+ruby '3.0.2'
 
 gem 'bootsnap', require: false
 gem 'devise'
@@ -15,6 +15,7 @@ gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 7.0.1'
 gem 'redis', '~> 4.0'
+gem 'rspec_junit_formatter'
 gem 'rubocop-rails', require: false
 gem 'sidekiq'
 gem 'simplecov', require: false, group: :test
