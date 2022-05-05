@@ -33,6 +33,10 @@
     color: white;
   }
 
+.mystery {
+    width: 15px;
+    height: 15px;
+}
 .nav_bar_container {
     display: flex;
     border: 20px;
@@ -43,6 +47,10 @@
     border-color: black;
     align-items: center;
     color: white;
+}
+
+.promo_acceptance {
+    display: none;
 }
 
 .flight_search_nav_container {

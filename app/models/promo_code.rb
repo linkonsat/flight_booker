@@ -1,7 +1,7 @@
 class PromoCode < ApplicationRecord
     belongs_to :booking
     attribute :value_off, :integer, default: -> { self.random_discount }
-    attribute :code, :string, default: "ab7tho"
+    attribute :code, :string, default: "ab8tho"
     validate :accepted_value_off
     validate :recently_used
     validates :code, length: { is: 6, wrong_length: "Character count must be 6" }

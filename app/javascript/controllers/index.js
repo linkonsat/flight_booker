@@ -7,3 +7,8 @@ import { application } from "./application"
 import FlightSelectorController from "./flight_selector_controller.js"
 application.register("flight-selector", FlightSelectorController)
 
+import FormValidationController from "./form_validation_controller.js"
+application.register("form-validation", FormValidationController)
+
+import PromoCodeController from "./promo_code_controller.js"
+application.register("promo-code", PromoCodeController)

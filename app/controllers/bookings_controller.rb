@@ -3,9 +3,9 @@
 class BookingsController < ApplicationController
   def new
     if params.key?(:flight_id)
+      @booking = Booking.new
       @flight = Flight.find(params[:flight_id])
       @passenger_count = params[:passengers_num]
-      @booking = Booking.new
       @passenger_count.to_i.times { @booking.passengers.build }
     else
       redirect_to root_url, flash: 'Error. No flight selected. Please select a flight before creating a booking.'
@@ -13,8 +13,13 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(valid_booking_params(params))
-    if @booking.save
+    booking_params = valid_booking_params(params)
+    @booking = Booking.new(booking_params)
+    if @booking.save!
+      if(params[:booking][:discount] == "yes")
+        @promo_code = PromoCode.new(:booking_id => @booking.id) 
+        @promo_code.save! 
+      end
       redirect_to @booking
       @flight = Flight.find(params[:booking][:flight_id])
       @emails = []

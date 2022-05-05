@@ -1,7 +1,10 @@
 <%= render "top_nav_bar" %>
-<div class="flight_search_nav_container">
+<div class="flight_search_nav_container" data-controller="promo-code">
 <h2> New Day Airlines
 </h2>
+<div class="mystery" data-action="click->promo-code#prompt">
+
+</div>
   <div class="flight_search_box">
     <div class="booking_form_header" >
       Thanks for choosing New Day Airlines(very real).
@@ -42,9 +45,16 @@
         </div>
         </div>
           <% end %>
+          <div data-promo-code-target="accept" class="promo_acceptance">
+          <%= form.radio_button :discount, "yes" %>
+          <%= form.label :yes, "yes" %>
+          <%= form.radio_button :discount, "no" %>
+          <%= form.label :no, "no" %>
+          </div>
         <div class="booking_submit_button">
           <%= form.submit %>
         </div>
+        
     <% end %>
   </div>
 </div>
