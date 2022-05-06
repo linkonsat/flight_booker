@@ -4,14 +4,14 @@ require 'rails_helper'
 
 RSpec.describe 'Flight index', type: :system do
   describe 'index page' do
-    it 'Does not show flights before a search is entered' do
+    xit 'Does not show flights before a search is entered' do
       build(:airport, code: "SFO", id: 2) 
       build(:flight) 
       visit '/'
       expect(page).to have_content('No valid flights found. Please enter another search to find flights.')
     end
 
-    it 'Should display a message if no flights are found' do
+    xit 'Should display a message if no flights are found' do
       build(:airport, code: "SFO", id: 2)
       build(:flight)
       visit '/'
@@ -23,7 +23,7 @@ RSpec.describe 'Flight index', type: :system do
       click_on 'Search'
       expect(page).to have_content('No valid flights found. Please enter another search to find flights.')
     end
-    it 'Should display a flight if a flight is found' do
+    xit 'Should display a flight if a flight is found' do
       build(:airport)
       build(:airport, code: "SFO", id: 2)
       build(:flight)
@@ -35,7 +35,7 @@ RSpec.describe 'Flight index', type: :system do
       click_on 'Search'
       expect(page).to have_content('10:35:00 PM')
     end
-    it 'Should load the passenger signup form is selected' do
+    xit 'Should load the passenger signup form is selected' do
       build(:airport)
       build(:airport, code: "SFO", id: 2)
       build(:flight)
