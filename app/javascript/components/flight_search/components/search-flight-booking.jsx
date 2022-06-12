@@ -47,12 +47,14 @@ class BookingData extends React.Component {
         return (
           <div>
           <form onSubmit={this.handleSubmit}>
-            <label>
-              Email:
-              <input type="text" name="email" />
-            </label>
-            <div>
-            <label>
+            <div class="flight_search_option">
+              <label>
+                Email:
+                <input type="text" name="email" />
+              </label>
+            </div>
+            <div class="flight_search_option">
+            <label class="flight_search-column">
               Flight id:
               <input type="text" name="flight_id" />
             </label>

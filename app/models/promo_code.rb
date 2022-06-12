@@ -15,8 +15,8 @@ class PromoCode < ApplicationRecord
 
 
     def self.random_discount 
-    discount = 20
-    return discount 
+    discount = [20,25,50]
+    return discount[rand(3)] 
     end
 
     def recently_used
