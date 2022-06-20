@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom'
 
 
 class FlightDisplay extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {props}
+    constructor(flight_data) {
+        super(flight_data);
+        this.state = {flight_data}
     }
 
     componentDidMount() {
@@ -18,11 +18,11 @@ class FlightDisplay extends React.Component {
     render() {
         return (
             <div>
-        <div>Flight id: {this.props.props.id}</div>
-        <div>Departure airport: {this.props.props.departure_airport}</div>
-        <div>Arrival airport: {this.props.props.destination_airport}</div>
-        <div>departure time: {this.props.props.departure_time}</div>
-        <div>Arrival time: {this.props.props.arrival_time}</div>
+        <div>Flight id: {this.props.flight_data.id}</div>
+        <div>Departure airport: {this.props.flight_data.departure_airport}</div>
+        <div>Arrival airport: {this.props.flight_data.destination_airport}</div>
+        <div>departure time: {this.props.flight_data.departure_time}</div>
+        <div>Arrival time: {this.props.flight_data.arrival_time}</div>
         </div>
         )
     }

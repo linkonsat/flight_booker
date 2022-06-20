@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom'
 
 
 class CustomErrors extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {props}
-        console.log(props)
+    constructor(response) {
+        super(response);
+        this.state = {response}
     }
 
     componentDidMount() {

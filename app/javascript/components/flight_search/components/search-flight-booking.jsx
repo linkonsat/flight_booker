@@ -32,9 +32,10 @@ class BookingData extends React.Component {
         .then(function(response) {
           if(response.ok) {
             let flight_data = JSON.parse(response.headers.get("flight"))
-            ReactDOM.render(<FlightDisplay props={flight_data} />, resultElement)
+            console.log(flight_data.id)
+            ReactDOM.render(<FlightDisplay flight_data={flight_data} />, resultElement)
           } else {
-            ReactDOM.render(<CustomErrors props={response.status} />, resultElement )
+            ReactDOM.render(<CustomErrors response={response.status} />, resultElement )
           }
       })
         event.preventDefault();
