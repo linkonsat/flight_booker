@@ -3,13 +3,15 @@
 
 <div class="flight_search_nav_container">
   <div class="flight_search_box">
-  <div>
-    <%= form_with method: :get do |form| %>
-      <div data-controller="flight-selector">
+    <%= form_with method: :get, html: {class: "flight_selector"} do |form| %>
         <div class="flight_search_options">
             <div class="flight_search_option" data-action="change->flight-selector#hide_arrival_airport" data-flight-selector-target="arrival_airport">
-              Departure Airports:
+            <div>  
+            Departing From: 
+            </div>
+            <div>
               <%= form.collection_select :departure_id, Airport.order(:code), :id, :code %>
+            </div>
             </div>
 
             <div class="flight_search_option" data-action="change->flight-selector#hide_departure_airport" data-flight-selector-target="departure_airport">
@@ -17,20 +19,24 @@
               <%= form.collection_select :destination_id, Airport.order(:code), :id, :code %>
             </div>
             <div class="flight_search_option">
-              Flight arrivals:
+              Flight arrival day:
               <%= form.collection_select :departure_time, Flight.unique_flight_days, :departure_time, :departure_days %>
             </div>
             <div class="flight_search_option">
-              Passenger count: 
-              <%= number_field_tag 'quantity', 1, min: 1, max: 4 %>
+              <div>
+                Passenger count: 
+              </div>
+              <div>
+                <%= number_field_tag 'quantity', 1, min: 1, max: 4, class: "number_selector" %>
+              </div>
             </div>
              <div class="flight_search_option">
-               <%= form.submit "Search" %>
+                <div class="center_box">
+                  <%= form.submit "Search" %>
+                </div>
              </div>
          
     <% end %>
-    </div>
-  </div>
   </div>
   </div>
 

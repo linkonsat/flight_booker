@@ -53,6 +53,8 @@
     display: none;
 }
 
+
+
 .flight_search_nav_container {
     display: flex;
     flex-direction: column;
@@ -71,9 +73,10 @@
     overflow: auto;
     padding: 5px;
     overflow: auto;
-    background-image: url("https://images.pexels.com/photos/290595/pexels-photo-290595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-image: url("https://images.pexels.com/photos/1822685/pexels-photo-1822685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     display: flex;
-    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
 }
 
 .flight_search_result_box {
@@ -85,6 +88,10 @@
     margin-left: 5px;
 }
 
+.center_box {
+    padding-top:30%;
+}
+
 .flight_search_option {
     margin-bottom: 10px;
     border-right: 5px;
@@ -92,7 +99,10 @@
     padding: 3px;
     border-radius: 10px;
     box-shadow: 3px 3px black;
-    height: 25px;   
+    height: 55px;   
+    display:flex;
+    flex-direction:column;
+    align-items: center;
 }
 
 .flight_result_option {
@@ -108,6 +118,14 @@
     column-count: 2;
 }
 
+.flight_selector {
+    width: 65%;
+}
+
+.number_selector {
+    width: 50px;
+}
+
 .flight_search_options {
     display: flex;
     column-count: 5;
@@ -117,6 +135,8 @@
     margin-top: 15%;
     height: 100px;
     align-items: center;
+    border: 1px solid black;
+    border-radius: 3px;
 }
 
 .flight_search-column {
