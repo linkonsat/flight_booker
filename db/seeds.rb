@@ -1,3 +1,4 @@
+
 # frozen_string_literal: true
 
 # This file should contain all the record creation needed to seed the database with its default values.
@@ -64,3 +65,19 @@ end
 
 Booking.create!(flight_id: 2, status: 'valid')
 Passenger.create!(name: 'testuser', age: 55, email: 'testuser@gmail.com', booking_id: 1)
+
+Airline.create!(:name => "wild air")
+Airline.create!(:name => "spirit sky")
+Airline.create!(:name => "Free Lines")
+Airline.create!(:name => "Busy Skies")
+Ticket.create!(:price => rand(150), :airline_id => 1)
+Ticket.create!(:price => rand(150), :airline_id => 1)
+Ticket.create!(:price => rand(150), :airline_id => 1)
+Ticket.create!(:price => rand(150), :airline_id => 2)
+Ticket.create!(:price => rand(150), :airline_id => 2)
+Ticket.create!(:price => rand(150), :airline_id => 3)
+Ticket.create!(:price => rand(150), :airline_id => 3)
+Ticket.create!(:price => rand(150), :airline_id => 3)
+Ticket.create!(:price => rand(150), :airline_id => 4)
+Ticket.create!(:price => rand(150), :airline_id => 4)
+Ticket.create!(:price => rand(150), :airline_id => 4)

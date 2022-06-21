@@ -10,9 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_01_045742) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_21_031920) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "airlines", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "airports", force: :cascade do |t|
     t.string "code"
@@ -51,6 +57,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_01_045742) do
     t.index ["booking_id"], name: "index_promo_codes_on_booking_id"
   end
 
+  create_table "tickets", force: :cascade do |t|
+    t.integer "price"
+    t.bigint "airline_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["airline_id"], name: "index_tickets_on_airline_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "user_name"
     t.string "bio"
@@ -69,4 +83,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_01_045742) do
   add_foreign_key "flights", "airports", column: "departure_airport_id"
   add_foreign_key "flights", "airports", column: "destination_airport_id"
   add_foreign_key "promo_codes", "bookings"
+  add_foreign_key "tickets", "airlines"
 end

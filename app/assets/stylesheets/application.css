@@ -61,17 +61,19 @@
     height: 75%;
     background-color: whitesmoke;
     color: black;
-    background-image: url(https://images.unsplash.com/photo-1597200381847-30ec200eeb9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+    
     background-size: 100%;
 }
 
 .flight_search_box {
     height: 60%;
-    border: ridge 5px skyblue;
-    width: 300px;
+    width: 100%;
     overflow: auto;
     padding: 5px;
     overflow: auto;
+    background-image: url("https://images.pexels.com/photos/290595/pexels-photo-290595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    display: flex;
+    flex-direction: column;
 }
 
 .flight_search_result_box {
@@ -90,21 +92,31 @@
     padding: 3px;
     border-radius: 10px;
     box-shadow: 3px 3px black;
+    height: 25px;   
 }
 
 .flight_result_option {
     margin-bottom: 10px;
     border-right: 5px;
-    border: solid 3px rgb(170, 1, 1);
+    border: solid 1px black;
     padding: 3px;
     border-radius: 10px;
     box-shadow: 3px 3px black;
     margin-left: 5px;
+    width: 70%;
+    display: flex;
+    column-count: 2;
 }
 
 .flight_search_options {
     display: flex;
-    column-count: 2;
+    column-count: 5;
+    justify-content: center;
+    background-color:#111236;
+    color: white;
+    margin-top: 15%;
+    height: 100px;
+    align-items: center;
 }
 
 .flight_search-column {
@@ -118,6 +130,11 @@
 
 .no_flights_found {
     padding-top: 5px;   
+}
+
+.result_box {
+    padding-top: 20px;
+    width: 70%;
 }
 
 .footer_nav_bar {

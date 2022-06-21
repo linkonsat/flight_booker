@@ -3,10 +3,10 @@
 
 <div class="flight_search_nav_container">
   <div class="flight_search_box">
+  <div>
     <%= form_with method: :get do |form| %>
       <div data-controller="flight-selector">
         <div class="flight_search_options">
-          <div class="flight_search-column">
             <div class="flight_search_option" data-action="change->flight-selector#hide_arrival_airport" data-flight-selector-target="arrival_airport">
               Departure Airports:
               <%= form.collection_select :departure_id, Airport.order(:code), :id, :code %>
@@ -16,8 +16,6 @@
               Arrival airports:
               <%= form.collection_select :destination_id, Airport.order(:code), :id, :code %>
             </div>
-          </div>
-          <div class="flight_search_column">
             <div class="flight_search_option">
               Flight arrivals:
               <%= form.collection_select :departure_time, Flight.unique_flight_days, :departure_time, :departure_days %>
@@ -26,17 +24,22 @@
               Passenger count: 
               <%= number_field_tag 'quantity', 1, min: 1, max: 4 %>
             </div>
-            </div>
-          </div>
              <div class="flight_search_option">
                <%= form.submit "Search" %>
              </div>
+         
     <% end %>
+    </div>
+  </div>
+  </div>
+  </div>
+
     <% if @validated_flights.nil? || @validated_flights.empty? %>
       <div class="no_flights_found">
         No valid flights found. Please enter another search to find flights.
       </div>
     <% else %>
+      <div class="result_box">
         <%= form_with method: :get, url: "bookings/new" do |form| %>
           <div class="flight_search_result_box">
             <%= form.collection_radio_buttons :flight_id, Flight.valid_flights(params), :id, :departure_times do |b| %>
@@ -54,17 +57,21 @@
                     arriving at <%= b.object.arrival_time.to_datetime.strftime('%r') %>
                   </div>
                 </div>
+                <div class="all_deals">
+                  
+                </div>
               </div>
-          </div>
         
         <%= form.hidden_field :passengers_num, value: "#{@passenger_count}" %>
         
         <% end %>
         <%= form.submit "submit" %>
         <% end %>   
+      </div>
       <% end %>
+      </div>
+
     </div>
-  </div>
   </div>
 </div>
 <%= render "footer_nav_bar" %>
