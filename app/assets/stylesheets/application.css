@@ -32,6 +32,11 @@
   a:visited {
     color: white;
   }
+.logo_slogan {
+    font-style: italic;
+    display: flex;
+    min-height: 100%;
+}
 
 .mystery {
     width: 15px;
@@ -41,12 +46,12 @@
     display: flex;
     border: 20px;
     justify-content: space-between;
-    height: 12.5%;
-    background-color: rgb(1, 112, 156);
-    border-bottom: solid;
-    border-color: black;
+    height: 14%;
     align-items: center;
-    color: white;
+    color: black;
+    background-color: whitesmoke;
+    justify-content: center;
+    gap: 5px;
 }
 
 .promo_acceptance {
@@ -59,12 +64,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 75%;
+    height: 73.5%;
     background-color: whitesmoke;
-    color: black;
-    
-    background-size: 100%;
+    color: white;
+    overflow: auto;
+    padding-top: 50px;
 }
 
 .flight_search_box {
@@ -105,6 +109,11 @@
     align-items: center;
 }
 
+.logo_slogan_text {
+    align-self: flex-end;
+    margin:0;
+}
+
 .flight_result_option {
     margin-bottom: 10px;
     border-right: 5px;
@@ -116,10 +125,16 @@
     width: 70%;
     display: flex;
     column-count: 2;
+    justify-content: space-around;
 }
 
 .flight_selector {
     width: 65%;
+}
+
+.logo {
+    max-height: 75%;
+    align-self: start;
 }
 
 .number_selector {
@@ -155,6 +170,7 @@
 .result_box {
     padding-top: 20px;
     width: 70%;
+
 }
 
 .footer_nav_bar {
@@ -167,6 +183,7 @@
     background-color: rgb(1, 112, 156);
     align-items: center;
     color: white;
+    height: 12.5%;
 }
 
 .booking_forms {

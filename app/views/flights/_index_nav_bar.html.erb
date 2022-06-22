@@ -4,8 +4,13 @@
   <% if user_signed_in? %>
     <%= button_to "Log out", destroy_user_session_path, method: :delete %>
   <% else %>
-    <div class="nav_bar_items">
-    Coming soon...
+    <div class="logo_slogan">
+      <h2 class="logo_slogan_text">
+        Flights, Drinks, and Relaxation. Welcome to
+      </h2>
+    </div>
+    <div class="logo">
+    <%= image_tag "new_day_airlines.png" %>
     </div>
     <div class="nav_bar_items">
       <%= link_to "Register", new_user_registration_path %>

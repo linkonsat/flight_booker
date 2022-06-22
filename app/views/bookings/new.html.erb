@@ -6,25 +6,27 @@
 
 </div>
   <div class="flight_search_box">
-    <div class="booking_form_header" >
-      Thanks for choosing New Day Airlines(very real).
-      Please make sure to present the email at the terminal.
-      Your Flight information can be found below.
-    </div>
-    <div class="booking_form_information">
-      <div>
-        Departure time: <%= @flight.departure_time.to_datetime.strftime("%r") %>
+    <div>
+      <div class="booking_form_header" >
+        Thanks for choosing New Day Airlines(very real).
+        Please make sure to present the email at the terminal.
+        Your Flight information can be found below.
       </div>
-      <div>
-        Departure airport: <%= @flight.departure_airport.code %>
+      <div class="booking_form_information">
+        <div>
+          Departure time: <%= @flight.departure_time.to_datetime.strftime("%r") %>
+        </div>
+        <div>
+          Departure airport: <%= @flight.departure_airport.code %>
+        </div>
+        <div>
+          Arrival airport: <%= @flight.destination_airport.code %>
+        </div>
+        <div>
+          Flight id:  <%= @flight.id %>
+        </div>
+         Passenger sign-up form
       </div>
-      <div>
-        Arrival airport: <%= @flight.destination_airport.code %>
-      </div>
-      <div>
-        Flight id:  <%= @flight.id %>
-      </div>
-        Passenger sign-up form
     </div>
     <%= form_with model: @booking do |form| %>
        
@@ -57,5 +59,6 @@
         
     <% end %>
   </div>
+</div>
 </div>
 <%= render "flights/footer_nav_bar" %>
