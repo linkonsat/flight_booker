@@ -36,6 +36,8 @@
     font-style: italic;
     display: flex;
     min-height: 100%;
+    animation-duration: 3s;
+    animation-name: fadein;
 }
 
 .mystery {
@@ -114,6 +116,12 @@
     margin:0;
 }
 
+.image_fade_animation {
+    animation-duration: 7s;
+    animation-name: fadein;
+    position: absolute;
+}
+
 .flight_result_option {
     margin-bottom: 10px;
     border-right: 5px;
@@ -126,6 +134,7 @@
     display: flex;
     column-count: 2;
     justify-content: space-around;
+    color: black;
 }
 
 .flight_selector {
@@ -141,10 +150,13 @@
     width: 50px;
 }
 
+.flight_airport {
+    align-self: center;
+}
 .flight_search_options {
     display: flex;
     column-count: 5;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color:#111236;
     color: white;
     margin-top: 15%;
@@ -213,3 +225,14 @@
 .dropdown_options {
     display: contents;
 }
+
+@keyframes fadein {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  

@@ -50,7 +50,7 @@
           <div class="flight_search_result_box">
             <%= form.collection_radio_buttons :flight_id, Flight.valid_flights(params), :id, :departure_times do |b| %>
               <div class="flight_result_option"">
-                <div>
+                <div class="flight_airport">
                   <div class="radio_button_text"> 
                     From <%= b.object.departure_airport.code %> 
                     to <%= b.object.destination_airport.code %>
