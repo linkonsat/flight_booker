@@ -1,6 +1,14 @@
 # frozen_string_literal: true
 
 FactoryBot.define do
+  factory :ticket do
+    
+  end
+
+  factory :airline do
+    
+  end
+
   factory :airport do
     code { 'LAX' }
   end

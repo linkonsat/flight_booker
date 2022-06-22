@@ -15,10 +15,10 @@ RSpec.describe PromoCode, type: :model do
         2.times do 
             create(:airport)
           end
+          debugger
           create(:flight)
           create(:booking)
         promo_code = create(:promo_code)
-        debugger
         expect([20,25,50].include?(promo_code.value_off)).to eql(true)
     end
 
