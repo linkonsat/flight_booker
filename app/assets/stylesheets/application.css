@@ -23,6 +23,7 @@
 
  html {
     height: 100%;
+    background-color: whitesmoke;
  }
  
  a:link {
@@ -66,7 +67,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 73.5%;
+    height: 68%;
     background-color: whitesmoke;
     color: white;
     overflow: auto;
@@ -239,3 +240,20 @@
     }
   }
   
+  @media only screen and (max-width: 600px) {
+    .flight_search_nav_container {
+      margin-top: 46%;
+    }
+
+    .nav_bar_container {
+        flex-direction: column;
+    }
+
+    .flight_selector {
+        width: 100%;
+    }
+
+    .flight_search_option {
+        height: 60px;
+    }
+  }
