@@ -83,6 +83,8 @@
     display: flex;
     align-items: baseline;
     justify-content: center;
+    gap: 10%;
+    
 }
 
 .flight_search_result_box {
@@ -142,7 +144,7 @@
 }
 
 .logo {
-    max-height: 75%;
+    max-height: 55%;
     align-self: start;
 }
 

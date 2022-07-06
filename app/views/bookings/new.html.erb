@@ -27,8 +27,8 @@
       </div>
     </div>
     <%= form_with model: @booking do |form| %>
-       
       <%= form.fields_for :passengers do |passenger_form| %>
+        Passenger Form
         <div class="child">
           <%= form.hidden_field :flight_id, value: "#{@flight.id}" %> 
         <div class="flight_search_option">
