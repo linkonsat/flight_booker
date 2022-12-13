@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'Flight index', type: :system do
   describe 'index page' do
-    xit 'Does not show flights before a search is entered' do
+    it 'Does not show flights before a search is entered' do
       build(:airport, code: "SFO", id: 2) 
       build(:flight) 
       visit '/'
