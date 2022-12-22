@@ -7,7 +7,6 @@ RSpec.describe PromoCode, type: :model do
     end
     create(:flight)
     create(:booking)
-    debugger
     promo_code_one = create(:promo_code)
     promo_code_two = create(:promo_code)
     expect(promo_code_one.code).to_not eql(promo_code_two.code)
