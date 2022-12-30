@@ -114,11 +114,6 @@
     align-items: center;
 }
 
-.logo_slogan_text {
-    align-self: flex-end;
-    margin:0;
-}
-
 .image_fade_animation {
     animation-duration: 7s;
     animation-name: fadein;
@@ -147,6 +142,12 @@
 .logo {
     max-height: 55%;
     align-self: start;
+    margin-left: 20%;
+}
+
+.logo_slogan_text {
+    align-self: flex-end;
+    margin:0;
 }
 
 .number_selector {
