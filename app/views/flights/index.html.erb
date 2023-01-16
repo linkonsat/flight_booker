@@ -16,7 +16,7 @@
 
             <div class="flight_search_option" data-action="change->flight-selector#hide_departure_airport" data-flight-selector-target="departure_airport">
               Arrival airport:
-              <%= form.collection_select :destination_id, Airport.order(:code), :id, :code %>
+              <%= form.collection_select :destination_id, Airport.order(:code), :id, :code, include_blank: true %>
             </div>
             <div class="flight_search_option">
               Arrival day:
