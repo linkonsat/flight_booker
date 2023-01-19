@@ -150,6 +150,14 @@
     margin:0;
 }
 
+.nav_bar_items {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    letter-spacing: .5px;
+}
+
 .number_selector {
     width: 50px;
 }
