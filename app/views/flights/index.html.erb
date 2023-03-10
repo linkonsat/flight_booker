@@ -4,17 +4,15 @@
 <div class="flight_search_nav_container">
   <div class="flight_search_box">
     <%= form_with method: :get, html: {class: "flight_selector"} do |form| %>
-        <div class="flight_search_options">
-            <div class="flight_search_option" data-action="change->flight-selector#hide_arrival_airport" data-flight-selector-target="arrival_airport">
+        <div class="flight_search_options" data-controller="flight-selector">
+            <div class="flight_search_option" data-action="change->flight-selector#hide_arrival_airport" data-flight-selector-target="arrivalAirport">
             <div>  
             Departing From: 
             </div>
-            <div>
-              <%= form.collection_select :departure_id, Airport.order(:code), :id, :code %>
-            </div>
+              <%= form.collection_select :departure_id, Airport.order(:code), :id, :code, include_blank: true %>
             </div>
 
-            <div class="flight_search_option" data-action="change->flight-selector#hide_departure_airport" data-flight-selector-target="departure_airport">
+            <div class="flight_search_option" data-action="change->flight-selector#hide_departure_airport" data-flight-selector-target="departureAirport">
               Arrival airport:
               <%= form.collection_select :destination_id, Airport.order(:code), :id, :code, include_blank: true %>
             </div>

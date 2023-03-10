@@ -44,7 +44,7 @@ class BookingData extends React.Component {
 
 
 
-    render() {
+    render(e) {
         return (
           <div>
           <form onSubmit={this.handleSubmit}>
@@ -67,5 +67,6 @@ class BookingData extends React.Component {
         );
       }
   }
-
+if(document.getElementById('search_box')) { 
   ReactDOM.render(<BookingData />, document.getElementById('search_box'));
+} 

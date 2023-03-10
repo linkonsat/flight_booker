@@ -2,17 +2,17 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="flight-selector"
 export default class extends Controller {
-  static targets = ["departure_airport", "arrival_airport"]
+  static targets = ["departureAirport", "arrivalAirport"]
   hide_departure_airport(event) {
     let selected_id = event.srcElement.selectedIndex;
-    let element = this.arrival_airportTarget.childNodes[1];
+    let element = this.arrivalAirportTarget.childNodes[3];
     this.reveal_airport(element)
-    element[selected_id].style.display = "none"
+    element[selected_id].style.display = "none"; 
   }
 
   hide_arrival_airport(event) {
     let selected_id = event.srcElement.selectedIndex;
-    let element = this.departure_airportTarget.childNodes[1];
+    let element = this.departureAirportTarget.childNodes[1];
     this.reveal_airport(element)
     element[selected_id].style.display = "none"; 
   }
