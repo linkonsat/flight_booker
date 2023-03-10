@@ -48,7 +48,6 @@
 .nav_bar_container {
     display: flex;
     border: 20px;
-    justify-content: space-between;
     height: 14%;
     align-items: center;
     color: black;
@@ -142,7 +141,6 @@
 .logo {
     max-height: 55%;
     align-self: start;
-    margin-left: 20%;
 }
 
 .logo_slogan_text {
