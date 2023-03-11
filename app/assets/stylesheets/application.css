@@ -263,4 +263,14 @@
     .flight_search_option {
         height: 60px;
     }
+
+    .flight_search_options {
+        margin-top: 0px;
+        flex-direction: column;
+        height:100%;
+    }
+
+    .image_fade_animation {
+        margin-left: 10%;
+    }
   }
