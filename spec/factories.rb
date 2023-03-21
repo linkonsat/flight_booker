@@ -28,4 +28,8 @@ FactoryBot.define do
   factory :booking do 
     flight_id { Flight.last.id }
   end
+
+  factory :user do 
+      password { "123456" }
+  end
 end
