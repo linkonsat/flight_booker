@@ -46,7 +46,7 @@
       <div class="result_box">
         <%= form_with method: :get, url: "bookings/new" do |form| %>
           <div class="flight_search_result_box">
-            <%= form.collection_radio_buttons :flight_id, Flight.valid_flights(params), :id, :departure_times do |b| %>
+            <%= form.collection_radio_buttons :flight_id, @validated_flights, :id, :departure_times do |b| %>
               <div class="flight_result_option"">
                 <div class="flight_airport">
                   <div class="radio_button_text"> 
@@ -63,7 +63,7 @@
                 </div>
                 <div class="all_deals">
                   <div>
-                    <%= form.collection_radio_buttons :price, Ticket.random_tickets, :price, :price do |price|%>
+                    <%= form.collection_radio_buttons :price, @validated_flights[b.object.id - 1].tickets, :price, :price do |price|%>
                       <div>
                         <%= price.label(class: "child") { price.radio_button(class: "child") } %>
                         $ <%= price.object.price %> from <%= price.object.airline.name %>
