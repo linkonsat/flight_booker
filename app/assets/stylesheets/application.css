@@ -66,15 +66,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 68%;
+    height: 75%;
     background-color: whitesmoke;
     color: white;
     overflow: auto;
-    padding-top: 50px;
 }
 
 .flight_search_box {
-    height: 60%;
+    
     width: 100%;
     overflow: auto;
     padding: 5px;
@@ -117,6 +116,7 @@
     animation-duration: 7s;
     animation-name: fadein;
     position: absolute;
+    height: 13%;
 }
 
 .flight_result_option {
@@ -169,7 +169,7 @@
     justify-content: space-evenly;
     background-color:#111236;
     color: white;
-    margin-top: 15%;
+    margin-top: 3%;
     height: 100px;
     align-items: center;
     border: 1px solid black;
@@ -207,6 +207,9 @@
     align-items: center;
     color: white;
     height: 12.5%;
+    position: absolute;
+    bottom: 0;
+    sleft: 0;
 }
 
 .booking_forms {
