@@ -35,10 +35,10 @@ class Flight < ApplicationRecord
   end
 
   def self.valid_flights(params)
-    found_flight_paths = Flight.where('departure_airport_id = ?', params[:departure_id]).where(
-      'destination_airport_id = ?', params[:destination_id]
+    found_flight_paths = Flight.where('departure_airport_id = ?', params[:departure_airport_id]).where(
+      'destination_airport_id = ?', params[:destination_airport_id]
     )
-    flight_day = params[:departure_time].to_datetime.strftime('%y-%m-%d')
-    flights = found_flight_paths.where('departure_time LIKE ?', "%#{flight_day}%")
+    flight_day = params[:arrival_time].to_datetime
+    flights = found_flight_paths.where(arrival_time: (flight_day.midnight)..flight_day.end_of_day)
   end
 end

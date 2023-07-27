@@ -2,7 +2,8 @@
 
 class FlightsController < ApplicationController
   def index
-    if params[:departure_id].nil? || params[:departure_time].empty?
+  
+    if params[:destination_airport_id].nil? || params[:arrival_time].empty?
     else  
       @passenger_count = params[:quantity]
       @validated_flights = Flight.valid_flights(params)
