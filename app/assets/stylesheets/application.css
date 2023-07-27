@@ -225,6 +225,14 @@
     margin-bottom: 10px;
 }
 
+.booking_instructions {
+    background-color: lightslategrey;
+    border: solid;
+    border-color: black;
+    border-radius: 5%;
+    padding: 5px;
+}
+
 .booking_submit_button {
     margin-top: 10px;
 }
