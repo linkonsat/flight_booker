@@ -2,7 +2,7 @@
 
 class BookingsController < ApplicationController
   def new
-    if params.key?(:flight_id)
+    if params.key?(:flight_id) && check_tickets(params)
       @booking = Booking.new
       @flight = Flight.find(params[:flight_id])
       @passenger_count = params[:passengers_num]
@@ -29,6 +29,16 @@ class BookingsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+  def check_tickets(params)
+    valid_tickets = Ticket.where("price = ?",params[:price])
+    if(valid_ticket.where("flight_id =?", params[:flight_id]).empty?)
+      redirect_to root_url, flash: 'Error. This ticket is not included with this flight.'
+    else 
+      return true
+    end
+  end
+
 
   def show
     @booking = Booking.find(params[:id])

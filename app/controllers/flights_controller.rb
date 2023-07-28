@@ -2,9 +2,7 @@
 
 class FlightsController < ApplicationController
   def index
-  
-    if params[:destination_airport_id].nil? || params[:arrival_time].empty?
-    else  
+    if(ensure_presence(params))
       @passenger_count = params[:quantity]
       @validated_flights = Flight.valid_flights(params)
     end
@@ -18,6 +16,14 @@ class FlightsController < ApplicationController
     flight_details = found_flight.first.flight_info
     flight = flight_details.to_json
     response.headers['flight'] = flight.to_s
+  end
+  def ensure_presence(params)
+    params_array = [params[:destination_airport_id], params[:arrival_time], params[:departure_airport_id]]
+    if(params_array.include?(nil))
+      return false
+    else
+      return true
+    end
   end
 
   def valid_flights_params 
