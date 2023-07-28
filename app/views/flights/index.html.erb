@@ -65,7 +65,7 @@
                   <div>
                     <%= form.collection_radio_buttons :price, b.object.tickets, :price, :price do |price|%>
                       <div>
-                        <%= price.label(class: "child") { price.radio_button(class: "child", :value => price.id) } %>
+                        <%= price.label(class: "child") { price.radio_button(class: "child" )} %>
                         $ <%= price.object.price %> from <%= price.object.airline.name %>
                       </div>
                     <% end %>
