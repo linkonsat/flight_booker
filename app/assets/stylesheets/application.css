@@ -31,7 +31,19 @@
   }
   
   a:visited {
-    color: white;
+    color: black;
+  }
+  .booking_confirmation {
+    width: 100%;
+    overflow: auto;
+    padding: 5px;
+    overflow: auto;
+    background-image: url(https://images.pexels.com/photos/1822685/pexels-photo-1822685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    flex-direction:column;
   }
 .logo_slogan {
     font-style: italic;
@@ -154,6 +166,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     letter-spacing: .5px;
+    color: black;
 }
 
 .number_selector {
