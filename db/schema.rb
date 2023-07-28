@@ -33,8 +33,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_21_031920) do
 
   create_table "flights", force: :cascade do |t|
     t.bigint "destination_airport_id"
-    t.string "departure_time"
-    t.string "arrival_time"
+    t.datetime "departure_time"
+    t.datetime "arrival_time"
     t.string "departure_area"
     t.bigint "departure_airport_id"
   end
@@ -60,9 +60,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_21_031920) do
   create_table "tickets", force: :cascade do |t|
     t.integer "price"
     t.bigint "airline_id"
+    t.bigint "flight_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["airline_id"], name: "index_tickets_on_airline_id"
+    t.index ["flight_id"], name: "index_tickets_on_flight_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -84,4 +86,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_21_031920) do
   add_foreign_key "flights", "airports", column: "destination_airport_id"
   add_foreign_key "promo_codes", "bookings"
   add_foreign_key "tickets", "airlines"
+  add_foreign_key "tickets", "flights"
 end
