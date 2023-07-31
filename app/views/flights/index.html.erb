@@ -9,16 +9,16 @@
             <div>  
             Departing From: 
             </div>
-              <%= form.collection_select :departure_airport_id, Airport.order(:code), :id, :code, include_blank: true %>
+              <%= form.collection_select :departure_id, Airport.order(:code), :id, :code, include_blank: true %>
             </div>
 
             <div class="flight_search_option" data-action="change->flight-selector#hide_departure_airport" data-flight-selector-target="departureAirport">
               Arrival airport:
-              <%= form.collection_select :destination_airport_id, Airport.order(:code), :id, :code, include_blank: true %>
+              <%= form.collection_select :destination_id, Airport.order(:code), :id, :code, include_blank: true %>
             </div>
             <div class="flight_search_option">
               Arrival day:
-              <%= form.date_field :arrival_time %>
+              <%= form.collection_select :departure_time, Flight.unique_flight_days, :departure_time, :departure_days %>
             </div>
             <div class="flight_search_option">
               <div>
@@ -63,10 +63,10 @@
                 </div>
                 <div class="all_deals">
                   <div>
-                    <%= form.collection_radio_buttons :price, b.object.tickets, :price, :price do |price|%>
+                    <% b.object.tickets.each do | price | %>
                       <div>
-                        <%= price.label(class: "child") { price.radio_button(class: "child" )} %>
-                        $ <%= price.object.price %> from <%= price.object.airline.name %>
+                        <%= form.radio_button :id, price.id %>
+                        <%= form.label :ticket_id, "$#{price.price} from #{price.airline.name}" %>
                       </div>
                     <% end %>
                   </div>

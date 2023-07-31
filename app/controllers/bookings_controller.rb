@@ -8,7 +8,7 @@ class BookingsController < ApplicationController
       @passenger_count = params[:passengers_num]
       @passenger_count.to_i.times { @booking.passengers.build }
     else
-      redirect_to root_url, flash: 'Error. No flight selected. Please select a flight before creating a booking.'
+      redirect_to root_url flash.alert = "Invalid flight options selected."
     end
   end
 
@@ -31,8 +31,13 @@ class BookingsController < ApplicationController
   end
 
   def check_tickets(params)
-    valid_tickets = Ticket.where("price = ?",params[:price])
-    if(valid_ticket.where("flight_id =?", params[:flight_id]).empty?)
+    puts params
+    if(params[:id].blank?)
+      return
+    end
+    valid_tickets = Ticket.where("id = ?",params[:id])
+    found_tickets = valid_tickets.where("flight_id = ?", params[:flight_id])
+    if(found_tickets.empty?)
       redirect_to root_url, flash: 'Error. This ticket is not included with this flight.'
     else 
       return true
