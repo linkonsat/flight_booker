@@ -9,16 +9,16 @@
             <div>  
             Departing From: 
             </div>
-              <%= form.collection_select :departure_id, Airport.order(:code), :id, :code, include_blank: true %>
+              <%= form.collection_select :departure_airport_id, Airport.order(:code), :id, :code, include_blank: true %>
             </div>
 
             <div class="flight_search_option" data-action="change->flight-selector#hide_departure_airport" data-flight-selector-target="departureAirport">
               Arrival airport:
-              <%= form.collection_select :destination_id, Airport.order(:code), :id, :code, include_blank: true %>
+              <%= form.collection_select :destination_airport_id, Airport.order(:code), :id, :code, include_blank: true %>
             </div>
             <div class="flight_search_option">
               Arrival day:
-              <%= form.collection_select :departure_time, Flight.unique_flight_days, :departure_time, :departure_days %>
+              <%= form.date_field :arrival_time%> 
             </div>
             <div class="flight_search_option">
               <div>
