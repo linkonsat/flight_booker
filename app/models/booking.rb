@@ -17,8 +17,4 @@ class Booking < ApplicationRecord
     end
     return nil
   end
-
-  def check_tickets
-    debugger
-  end
 end
