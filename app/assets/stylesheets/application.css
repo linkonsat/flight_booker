@@ -72,6 +72,11 @@
     display: none;
 }
 
+.flight_availability {
+    display: flex;
+    justify-content: center;
+}
+
 
 
 .flight_search_nav_container {
