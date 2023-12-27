@@ -25,6 +25,7 @@ class BookingsController < ApplicationController
       @emails = []
       params[:booking][:passengers_attributes].each { |_key, value| @emails.push(value[:email]) }
       PassengerMailer.with(flight: @flight, emails: @emails).booking_confirmation.deliver_now
+      
     else
       render :new, status: :unprocessable_entity
     end

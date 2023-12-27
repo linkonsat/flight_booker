@@ -45,12 +45,22 @@
     gap: 10%;
     flex-direction:column;
   }
+
+  .all_deals {
+    border-left: solid;
+    border-left-color: aquamarine;
+  }
+
+  .checkout {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+  }
 .logo_slogan {
     font-style: italic;
     display: flex;
     min-height: 100%;
-    animation-duration: 3s;
-    animation-name: fadein;
 }
 
 .mystery {
@@ -93,7 +103,7 @@
     
     width: 100%;
     overflow: auto;
-    padding: 5px;
+    padding: 6dvh;
     overflow: auto;
     background-image: url("https://images.pexels.com/photos/1822685/pexels-photo-1822685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     display: flex;
@@ -109,7 +119,7 @@
 }
 
 .radio_button_text {
-    margin-left: 5px;
+    margin-left: 2.7dvh;
 }
 
 .center_box {
@@ -127,20 +137,21 @@
     display:flex;
     flex-direction:column;
     align-items: center;
+    border-radius: 25px;
 }
 
 .image_fade_animation {
-    animation-duration: 7s;
+    animation-duration: 0s;
     animation-name: fadein;
     position: absolute;
     height: 13%;
+    z-index: 0;
 }
 
 .flight_result_option {
     margin-bottom: 10px;
     border-right: 5px;
     border: solid 1px black;
-    padding: 3px;
     border-radius: 10px;
     box-shadow: 3px 3px black;
     margin-left: 5px;
@@ -149,6 +160,7 @@
     column-count: 2;
     justify-content: space-around;
     color: black;
+    background-color: antiquewhite;
 }
 
 .flight_selector {
@@ -163,6 +175,7 @@
 .logo_slogan_text {
     align-self: flex-end;
     margin:0;
+    Z-index: 1;
 }
 
 .nav_bar_items {

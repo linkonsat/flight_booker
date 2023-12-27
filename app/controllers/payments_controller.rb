@@ -1,13 +1,16 @@
-class StripesController < ApplicationController
+class PaymentsController < ApplicationController
     def new 
+        @booking = Booking.find(params[:booking_id])
     end
 
     def create
+        
+        redirect_to '/'
         customer = Stripe::Customer.create({
             :email => params[:stripeEmail],
             :source => params[:stripeToken]
         })
-
+        
         charge = Stripe::Charge.create({
             :customer => customer.id,
             :amount => 500,
