@@ -9,22 +9,22 @@
         <div class="flight_search_options" data-controller="flight-selector">
             <div class="flight_search_option" data-action="change->flight-selector#hide_arrival_airport" data-flight-selector-target="arrivalAirport">
             <div>  
-            Departing From: 
+            Departing From
             </div>
               <%= form.collection_select :departure_airport_id, Airport.order(:code), :id, :code, include_blank: true %>
             </div>
 
             <div class="flight_search_option" data-action="change->flight-selector#hide_departure_airport" data-flight-selector-target="departureAirport">
-              Arrival airport:
+              Arrival Airport
               <%= form.collection_select :destination_airport_id, Airport.order(:code), :id, :code, include_blank: true %>
             </div>
             <div class="flight_search_option">
-              Arrival day:
+              Arrival Day
               <%= form.date_field :arrival_time%> 
             </div>
             <div class="flight_search_option">
               <div>
-                Passenger count: 
+                Passenger Count
               </div>
               <div>
                 <%= number_field_tag 'quantity', 1, min: 1, max: 4, class: "number_selector" %>
