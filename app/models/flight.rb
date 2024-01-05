@@ -16,7 +16,7 @@ class Flight < ApplicationRecord
 
   def departure_days
     departure_time.to_datetime.strftime('%y-%m-%d')
-  end
+  end   
 
   def flight_info
     flight_info = { id: id, departure_airport: departure_airport.code,

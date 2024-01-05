@@ -31,7 +31,7 @@
  }
  
  a:link {
-    color: white;
+    color: blue;
   }
   
   a:visited {
@@ -80,6 +80,7 @@
     background-color: whitesmoke;
     justify-content: center;
     gap: 5px;
+    border-bottom: 1px solid black;
 }
 
 .promo_acceptance {
